@@ -231,7 +231,7 @@ input[type=text].default {
 
         textarea.default.error:focus::placeholder,
         input.default.error:focus::placeholder {
-            opacity: 1; 
+            opacity: 1;
         }
 
         input.default.error:not(:placeholder-shown) + span.error,
@@ -261,8 +261,11 @@ ul.navigation-bar {
 
     ul.navigation-bar > li {
         display: inline-block;
-        margin-right: 3.7333rem;
     }
+
+        ul.navigation-bar > li:not(:last-child) {
+            margin-right: 3.7333rem;
+        }
 
         ul.navigation-bar > li > a {
             color: var(--medium-grey);
@@ -273,6 +276,20 @@ ul.navigation-bar {
             ul.navigation-bar > li > a:focus {
                 color: var(--very-dark-blue);
             }
+
+/* ------------------- */
+/* Tablet view         */
+/* ------------------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+    html {
+        font-size: 1.953125vw; /* 15px for 768px-viewport */
+    }
+
+    h1.L {
+        font-size: 8rem;
+        letter-spacing: -0.2rem;
+    }
+}
 
 /* ------------------- */
 /* Mobile view         */

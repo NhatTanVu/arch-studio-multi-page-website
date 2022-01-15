@@ -28,6 +28,37 @@
             padding: 0 11em;
         }
 
+        header {
+            margin: 3.7333rem 0;
+            align-items: center;
+            position: relative;
+        }
+
+            header > .bookmark {
+                position: absolute;
+                top: 4.5rem;
+                left: -14.7rem;
+                transform: rotate(90deg);
+                align-items: center;
+            }
+
+                header > .bookmark > .line {
+                    width: 7rem;
+                    border-bottom: 0.0666rem solid var(--light-grey);
+                    margin-right: 3.2rem;
+                }
+
+                header > .bookmark > .text {
+                    color: var(--light-grey);
+                    font-weight: 500;
+                    letter-spacing: 1rem;
+                }
+
+            header > .logo {
+                margin-right: 6.333rem;
+                height: 2.6666rem;
+            }
+
         .project-paramour {
             background-image: url('./assets/home/desktop/image-hero-paramour.jpg');
             background-repeat: no-repeat;
@@ -38,27 +69,363 @@
             margin-bottom: 13rem;
             position: relative;
         }
+
+            .project-paramour > .mask {
+                background-color: var(--black);
+                opacity: 0.35;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .project-paramour > .inner {
+                position: relative;
+            }
+
+                .project-paramour > .inner > h1.S {
+                    width: 36.2666rem;
+                    color: inherit;
+                    margin-bottom: 0.9333rem;
+                }
+
+                .project-paramour > .inner > div {
+                    width: 29.6666rem;
+                    margin-bottom: 2.6666rem;
+                }
+
+            .project-paramour > .number-button-container {
+                position: absolute;
+                bottom: 0;
+                left: -5.3333rem;
+            }
+
+        .welcome-to-arch-studio {
+            margin-bottom: 13.3333rem;
+            position: relative;
+        }
+
+            .welcome-to-arch-studio > h1.L {
+                position: absolute;
+                top: -6.6666rem;
+                left: 0;
+            }
+
+            .welcome-to-arch-studio > .inner > .left {
+                flex: 1;
+                padding: 5rem 0 0 12.6rem;
+            }
+
+                .welcome-to-arch-studio > .inner > .left > .inner {
+                    width: 29.7333rem;
+                }
+
+                    .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                        margin-bottom: 3.7333rem;
+                    }
+
+                    .welcome-to-arch-studio > .inner > .left > .inner > div {
+                        width: 29.7333rem;
+                    }
+
+            .welcome-to-arch-studio > .inner > .right {
+                flex: 0 0 23.3333rem;
+                background-image: url('./assets/home/desktop/image-welcome.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+        .small-team-big-ideas {
+            background-image: url('./assets/home/desktop/image-small-team.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 11.2rem 0 11.2rem 12.6666rem;
+            margin-bottom: 13.3333rem;
+            position: relative;
+        }
+
+            .small-team-big-ideas > .mask {
+                background-color: var(--black);
+                opacity: 0.5;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .small-team-big-ideas > .inner {
+                width: 29.6666rem;
+                position: relative;
+            }
+
+                .small-team-big-ideas > .inner > h2 {
+                    margin-bottom: 1.7333rem;
+                    color: var(--white);
+                }
+
+        .featured {
+            margin-bottom: 4.2666rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .featured-projects {
+            height: 37.3333rem;
+            margin-bottom: 13.333rem;
+            --gap: 2rem;
+        }
+
+            .featured-projects > .project {
+                flex: 1;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                color: var(--white);
+            }
+
+                .featured-projects > .project:nth-of-type(1) {
+                    background-image: url('./assets/portfolio/desktop/image-del-sol.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(2) {
+                    background-image: url('./assets/portfolio/desktop/image-228b.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(3) {
+                    background-image: url('./assets/portfolio/desktop/image-prototype.jpg');
+                }
+
+                .featured-projects > .project > h1.L {
+                    position: absolute;
+                    top: 2.1333rem;
+                    right: -0.75rem;
+                    opacity: 0.5;
+                    color: var(--white);
+                }
+
+                .featured-projects > .project > .mask {
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%);
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    height: 50%;
+                }
+
+                .featured-projects > .project > .inner {
+                    position: absolute;
+                    bottom: 2.6666rem;
+                    left: 2.6666rem;
+                }
+
+        footer {
+            position: relative;
+            height: 13.3333rem;
+            align-items: center;
+        }
+
+            footer > .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 13.3333rem;
+                height: 100%;
+                background-color: var(--very-dark-blue);
+                justify-content: center;
+            }
+
+                footer > .logo > svg {
+                    flex: 0 0 6.4rem;
+                    fill: var(--white);
+                }
+
+            footer > nav {
+                flex: 0 0 52.2666rem;
+                margin-left: 13.3333rem;
+                padding-left: 5.6666rem;
+                height: 100%;
+                background-color: var(--very-light-grey);
+                align-items: center;
+            }
+
+            footer > button {
+                position: absolute;
+                right: 0
+            }
+
+        /* ------------------- */
+        /* Tablet view         */
+        /* ------------------- */
+        @media only screen and (min-width : 768px) and (max-width : 1023px) {
+            .container {
+                padding: 0 6.5333rem 0 6.4666rem;
+            }
+
+            header > .bookmark {
+                top: 4.5rem;
+                left: -11.8666rem;
+            }
+
+            header > .logo {
+                margin-right: 5.256rem;
+            }
+
+            .project-paramour {
+                background-image: url('./assets/home/tablet/image-hero-paramour.jpg');
+                padding: 12rem 0 12rem 3.8666rem;
+                margin-bottom: 16.6rem;
+            }
+
+                .project-paramour > .inner {
+                    width: 30.4666rem;
+                }
+
+                    .project-paramour > .inner > h1.S {
+                        width: 100%;
+                        color: inherit;
+                    }
+
+                    .project-paramour > .inner > div {
+                        width: 100%;
+                    }
+
+                .project-paramour > .number-button-container {
+                    display: none;
+                }
+
+            .welcome-to-arch-studio > h1.L {
+                top: -11.6666rem;
+            }
+
+            .welcome-to-arch-studio > .inner > .left {
+                padding: 0;
+            }
+
+                .welcome-to-arch-studio > .inner > .left > .inner {
+                    width: auto;
+                }
+
+                    .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                        width: 29.7333rem;
+                    }
+
+                    .welcome-to-arch-studio > .inner > .left > .inner > div {
+                        width: auto;
+                        font-weight: 500;
+                    }
+
+            .welcome-to-arch-studio > .inner > .right {
+                display: none;
+            }
+
+            .small-team-big-ideas {
+                background-image: url('./assets/home/tablet/image-small-team.jpg');
+                padding: 11.2rem 0 11.2rem 3.8666rem;
+            }
+
+                .small-team-big-ideas > .inner > h2 {
+                    height: 10.1333rem;
+                }
+
+            .featured {
+                margin-bottom: 5.6666rem;
+            }
+
+            .featured-projects {
+                height: auto;
+                --gap: 1.6rem;
+                flex-direction: column;
+            }
+
+                .featured-projects > .project:nth-of-type(1) {
+                    background-image: url('./assets/portfolio/tablet/image-del-sol.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(2) {
+                    background-image: url('./assets/portfolio/tablet/image-228b.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(3) {
+                    background-image: url('./assets/portfolio/tablet/image-prototype.jpg');
+                }
+
+                .featured-projects > .project > h1.L {
+                    top: 1.0666rem;
+                    right: 1.0666rem;
+                    font-size: 13.3333rem;
+                    letter-spacing: 0.3333rem;
+                }
+
+                .featured-projects > .project > .mask {
+                    top: 0;
+                    height: 100%;
+                }
+
+                .featured-projects > .project {
+                    flex: 0 0 16rem;
+                }
+
+            footer {
+                position: relative;
+                height: 8rem;
+                align-items: center;
+                margin-left: -6.4666rem;
+                margin-right: -6.5333rem;
+            }
+
+                footer > .logo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8rem;
+                    height: 100%;
+                    background-color: var(--very-dark-blue);
+                    justify-content: center;
+                }
+
+                    footer > .logo > svg {
+                        flex: 0 0 3.8466rem;
+                    }
+
+                footer > nav {
+                    flex: 0 0 32.8rem;
+                    margin-left: 8rem;
+                    padding-left: 2.6666rem;
+                    height: 100%;
+                    background-color: var(--very-light-grey);
+                    align-items: center;
+                }
+
+                footer > button {
+                    position: absolute;
+                    right: 0
+                }
+        }
     </style>
 </head>
 <body class="container">
-    <header class="flex" style="margin: 3.7333rem 0; align-items: center; position: relative;">
-        <div class="flex" style="position: absolute; top: 4.5rem; left: -14.7rem; transform: rotate(90deg); align-items: center; ">
-            <span style="width: 7rem; border-bottom: 0.0666rem solid var(--light-grey); margin-right: 3.2rem;"></span>
-            <span style="color: var(--light-grey); font-weight: 500; letter-spacing: 1rem;">HOME</span>
+    <header class="flex">
+        <div class="flex bookmark">
+            <span class="line"></span>
+            <span class="text">HOME</span>
         </div>
-        <img src="./assets/logo.svg" style="margin-right: 6.333rem; height: 2.6666rem;" />
-        <ul class="navigation-bar">
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
+        <img class="logo" src="./assets/logo.svg" />
+        <nav>
+            <ul class="navigation-bar">
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="project-paramour">
-            <div class="mask" style="background-color: var(--black); opacity: 0.35; position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></div>
-            <div style="position: relative;">
-                <h1 class="S" style="width: 36.2666rem; color: inherit;">Project Paramour</h1>
-                <div style="width: 29.6666rem; margin-bottom: 2.6666rem;">
+            <div class="mask"></div>
+            <div class="inner">
+                <h1 class="S">Project Paramour</h1>
+                <div>
                     Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
                 </div>
                 <button class="default">
@@ -66,20 +433,20 @@
                     <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
                 </button>
             </div>
-            <div class="number-button-container" style="position: absolute; bottom: 0; left: -5.3333rem;">
+            <div class="number-button-container">
                 <button class="default number active">01</button>
                 <button class="default number">02</button>
                 <button class="default number">03</button>
                 <button class="default number">04</button>
             </div>
         </div>
-        <div class="welcome-to-arch-studio" style="margin-bottom: 13.3333rem; position: relative;">
-            <h1 class="L" style="position: absolute; top: -6.6666rem; left: 0;">Welcome</h1>
-            <div class="flex" style="height: 37.8666rem;">
-                <div style="flex: 1; padding: 5rem 0 0 12.6rem;">
-                    <div style="width: 29.7333rem;">
-                        <h2 style="margin-bottom: 3.7333rem;">Welcome to Arch Studio</h2>
-                        <div style="width: 29.7333rem;">
+        <div class="welcome-to-arch-studio">
+            <h1 class="L">Welcome</h1>
+            <div class="flex inner">
+                <div class="left">
+                    <div class="inner">
+                        <h2>Welcome to Arch Studio</h2>
+                        <div>
                             <p>We have a unique network and skillset to help bring your projects to life. Our small team of highly skilled individuals combined with our large network put us in a strong position to deliver exceptional results.</p>
                             <br />
                             <p>Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight.</p>
@@ -88,67 +455,65 @@
                         </div>
                     </div>
                 </div>
-                <div style="flex: 0 0 23.3333rem; background-image: url('./assets/home/desktop/image-welcome.jpg'); background-repeat: no-repeat; background-size: cover; "></div>
+                <div class="right"></div>
             </div>
         </div>
-        <div class="small-team-big-ideas" style="background-image: url('./assets/home/desktop/image-small-team.jpg'); background-repeat: no-repeat; background-size: cover; padding: 11.2rem 0 11.2rem 12.6666rem; margin-bottom: 13.3333rem; position: relative;">
-            <div class="mask" style="background-color: var(--black); opacity: 0.5; position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></div>
-            <div style="width: 29.6666rem; position: relative;">
-                <h2 style="margin-bottom: 1.7333rem; color: var(--white);">Small team, big ideas</h2>
+        <div class="small-team-big-ideas">
+            <div class="mask"></div>
+            <div class="inner">
+                <h2>Small team, big ideas</h2>
                 <button class="default">
                     <span style="margin-right: 1.6rem; font-weight: bold;">About Us</span>
                     <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
                 </button>
             </div>
         </div>
-        <div class="featured flex" style="margin-bottom: 4.8rem; justify-content: space-between; align-items: center;">
+        <div class="featured flex">
             <h2>Featured</h2>
             <button class="default">
                 <span style="margin-right: 1.6rem; font-weight: bold;">See All</span>
                 <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
             </button>
         </div>
-        <div class="flex featured-projects" style="height: 37.3333rem; margin-bottom: 13.333rem;">
-            <div style="flex: 1; background-image: url('./assets/portfolio/desktop/image-del-sol.jpg'); background-repeat: no-repeat; background-size: cover; position: relative;">
-                <h1 class="L" style="position: absolute; top: 2.1333rem; right: -0.75rem; opacity: 0.5; color: var(--white);">1</h1>
-                <div class="mask" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%); position: absolute; left: 0; top: 50%; width: 100%; height: 50%; "></div>
-                <div style="position: absolute; bottom: 2.6666rem; left: 2.6666rem; width: 9.4666rem; color: var(--white);">
+        <div class="flex featured-projects">
+            <div class="project">
+                <h1 class="L">1</h1>
+                <div class="mask"></div>
+                <div class="inner">
                     <div style="font-weight: bold; margin-bottom: 0.2666rem;">Project Del Sol</div>
                     <div style="opacity: 0.75;">View All Projects</div>
                 </div>
             </div>
-            <div style="flex: 0 0 2rem; height: 100%;"></div>
-            <div style="flex: 1; background-image: url('./assets/portfolio/desktop/image-228b.jpg'); background-repeat: no-repeat; background-size: cover; position: relative;">
-                <h1 class="L" style="position: absolute; top: 2.1333rem; right: -0.75rem; opacity: 0.5; color: var(--white);">2</h1>
-                <div class="mask" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%); position: absolute; left: 0; top: 50%; width: 100%; height: 50%; "></div>
-                <div style="position: absolute; bottom: 2.6666rem; left: 2.6666rem; width: 9.4666rem; color: var(--white);">
+            <div class="project">
+                <h1 class="L">2</h1>
+                <div class="mask"></div>
+                <div class="inner">
                     <div style="font-weight: bold; margin-bottom: 0.2666rem;">228B Tower</div>
                     <div style="opacity: 0.75;">View All Projects</div>
                 </div>
             </div>
-            <div style="flex: 0 0 2rem; height: 100%;"></div>
-            <div style="flex: 1; background-image: url('./assets/portfolio/desktop/image-prototype.jpg'); background-repeat: no-repeat; background-size: cover; position: relative; ">
-                <h1 class="L" style="position: absolute; top: 2.1333rem; right: -0.75rem; opacity: 0.5; color: var(--white);">3</h1>
-                <div class="mask" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%); position: absolute; left: 0; top: 50%; width: 100%; height: 50%; "></div>
-                <div style="position: absolute; bottom: 2.6666rem; left: 2.6666rem; width: 9.4666rem; color: var(--white);">
+            <div class="project">
+                <h1 class="L">3</h1>
+                <div class="mask"></div>
+                <div class="inner">
                     <div style="font-weight: bold; margin-bottom: 0.2666rem;">Le Prototype</div>
                     <div style="opacity: 0.75;">View All Projects</div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="flex" style="position: relative; height: 13.3333rem; align-items: center;">
-        <div class="flex" style="position: absolute; top: 0; left: 0; width: 13.3333rem; height: 100%; background-color: var(--very-dark-blue); justify-content: center;">
-            <svg style="flex: 0 0 6.4rem; fill: var(--white);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 40"><path d="M10.822 39.27l2.26-6.256h13.836l2.26 6.255H40L24.658 1.6h-9.316L0 39.268h10.822zM23.493 24.2h-6.986L20 15.252l3.493 8.95zm21.804 15.07V27.807c0-.776.22-1.499.662-2.169a5.14 5.14 0 011.746-1.632A4.51 4.51 0 0150 23.379c.64 0 1.343.13 2.112.388.769.259 1.434.601 1.998 1.028l3.972-7.991c-.654-.487-1.484-.883-2.488-1.188-1.005-.304-1.956-.456-2.854-.456-1.385 0-2.729.354-4.03 1.061-1.301.708-2.44 1.694-3.413 2.957V15.89h-9.498v23.38h9.498zm18.995.73c1.507 0 2.942-.21 4.304-.628 1.362-.418 2.439-.91 3.23-1.472l-3.105-6.393c-.289.198-.688.377-1.198.536-.51.16-1.07.24-1.678.24-.99 0-1.85-.217-2.58-.65a4.449 4.449 0 01-1.678-1.724 4.806 4.806 0 01-.582-2.33c0-.669.163-1.369.49-2.1.328-.73.845-1.347 1.553-1.849s1.625-.753 2.751-.753c1.187 0 2.161.258 2.922.776l3.105-6.393c-.76-.578-1.841-1.073-3.242-1.484a15.324 15.324 0 00-4.337-.616c-1.903 0-3.665.346-5.286 1.039-1.62.692-3.029 1.628-4.224 2.808a13.053 13.053 0 00-2.785 3.995 11.177 11.177 0 00-.993 4.6c0 1.69.354 3.285 1.062 4.784.707 1.5 1.678 2.82 2.91 3.961a13.79 13.79 0 004.258 2.683c1.606.647 3.307.97 5.103.97zm14.703-.73V26.392c0-.792.16-1.477.48-2.055a3.374 3.374 0 011.347-1.347c.578-.32 1.248-.48 2.01-.48 1.156 0 2.084.354 2.784 1.062.7.708 1.05 1.648 1.05 2.82v12.876h9.498V24.338c0-1.75-.41-3.314-1.232-4.692a9.088 9.088 0 00-3.345-3.276c-1.408-.807-3.003-1.21-4.783-1.21-1.4 0-2.782.255-4.144.765a12.064 12.064 0 00-3.665 2.157V0h-9.497v39.27h9.497z" /></svg>
+    <footer class="flex">
+        <div class="flex logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 40"><path d="M10.822 39.27l2.26-6.256h13.836l2.26 6.255H40L24.658 1.6h-9.316L0 39.268h10.822zM23.493 24.2h-6.986L20 15.252l3.493 8.95zm21.804 15.07V27.807c0-.776.22-1.499.662-2.169a5.14 5.14 0 011.746-1.632A4.51 4.51 0 0150 23.379c.64 0 1.343.13 2.112.388.769.259 1.434.601 1.998 1.028l3.972-7.991c-.654-.487-1.484-.883-2.488-1.188-1.005-.304-1.956-.456-2.854-.456-1.385 0-2.729.354-4.03 1.061-1.301.708-2.44 1.694-3.413 2.957V15.89h-9.498v23.38h9.498zm18.995.73c1.507 0 2.942-.21 4.304-.628 1.362-.418 2.439-.91 3.23-1.472l-3.105-6.393c-.289.198-.688.377-1.198.536-.51.16-1.07.24-1.678.24-.99 0-1.85-.217-2.58-.65a4.449 4.449 0 01-1.678-1.724 4.806 4.806 0 01-.582-2.33c0-.669.163-1.369.49-2.1.328-.73.845-1.347 1.553-1.849s1.625-.753 2.751-.753c1.187 0 2.161.258 2.922.776l3.105-6.393c-.76-.578-1.841-1.073-3.242-1.484a15.324 15.324 0 00-4.337-.616c-1.903 0-3.665.346-5.286 1.039-1.62.692-3.029 1.628-4.224 2.808a13.053 13.053 0 00-2.785 3.995 11.177 11.177 0 00-.993 4.6c0 1.69.354 3.285 1.062 4.784.707 1.5 1.678 2.82 2.91 3.961a13.79 13.79 0 004.258 2.683c1.606.647 3.307.97 5.103.97zm14.703-.73V26.392c0-.792.16-1.477.48-2.055a3.374 3.374 0 011.347-1.347c.578-.32 1.248-.48 2.01-.48 1.156 0 2.084.354 2.784 1.062.7.708 1.05 1.648 1.05 2.82v12.876h9.498V24.338c0-1.75-.41-3.314-1.232-4.692a9.088 9.088 0 00-3.345-3.276c-1.408-.807-3.003-1.21-4.783-1.21-1.4 0-2.782.255-4.144.765a12.064 12.064 0 00-3.665 2.157V0h-9.497v39.27h9.497z" /></svg>
         </div>
-        <div class="flex" style="flex: 0 0 52.2666rem; margin-left: 13.3333rem; padding-left: 5.6666rem; height: 100%; background-color: var(--very-light-grey); align-items: center;">
+        <nav class="flex">
             <ul class="navigation-bar">
                 <li><a href="./portfolio.html">Portfolio</a></li>
                 <li><a href="./about.html">About Us</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
-        </div>
-        <button class="default" style="position: absolute; right: 0;">
+        </nav>
+        <button class="default">
             <span style="margin-right: 1.6rem; font-weight: bold;">See Our Portfolio</span>
             <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
         </button>
