@@ -100,16 +100,25 @@
                 position: relative;
             }
 
-                .project-paramour > .inner > h1.S {
-                    width: 36.2666rem;
-                    color: inherit;
-                    margin-bottom: 0.9333rem;
+                .project-paramour > .inner > .data {
+                    display: none;
                 }
 
-                .project-paramour > .inner > div {
-                    width: 29.6666rem;
-                    margin-bottom: 2.6666rem;
-                }
+                    .project-paramour > .inner > .data.active {
+                        display: block;
+                    }
+
+                    .project-paramour > .inner > .data > h1.S {
+                        width: 36.2666rem;
+                        color: inherit;
+                        margin-bottom: 0.9333rem;
+                    }
+
+                    .project-paramour > .inner > .data > div {
+                        width: 29.6666rem;
+                        height: 6.6666rem;
+                        margin-bottom: 1rem;
+                    }
 
             .project-paramour > .number-button-container {
                 position: absolute;
@@ -302,12 +311,12 @@
                     width: 30.4666rem;
                 }
 
-                    .project-paramour > .inner > h1.S {
+                    .project-paramour > .inner > .data > h1.S {
                         width: 100%;
                         color: inherit;
                     }
 
-                    .project-paramour > .inner > div {
+                    .project-paramour > .inner > .data > div {
                         width: 100%;
                     }
 
@@ -479,13 +488,13 @@
                     width: 20.7333rem;
                 }
 
-                    .project-paramour > .inner > h1.S {
+                    .project-paramour > .inner > .data > h1.S {
                         width: 100%;
                         color: inherit;
                         margin-bottom: 1rem;
                     }
 
-                    .project-paramour > .inner > div {
+                    .project-paramour > .inner > .data > div {
                         width: 100%;
                         margin-bottom: 3.8rem;
                     }
@@ -651,6 +660,22 @@
                 return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
             }
             document.getElementById("header-mask").style.height = (bodyHeight - convertRemToPixels(6.4)) + "px";
+
+            let numberButtons = document.querySelectorAll(".number-button-container button.number");
+            for (let i = 0; i < numberButtons.length; i++) {
+                numberButtons[i].onclick = (e) => {
+                    document.querySelector(".number-button-container button.number.active").classList.remove("active");
+                    e.currentTarget.classList.add("active");
+                    let ref = e.currentTarget.dataset.ref;
+                    document.querySelector(".project-paramour .data.active").classList.remove("active");
+                    document.querySelector(".project-paramour ." + ref).classList.add("active");
+                    let newSrc = document.querySelector(".project-paramour ." + ref).dataset.src;
+                    let currentStyle = document.querySelector(".project-paramour").currentStyle || window.getComputedStyle(document.querySelector(".project-paramour"), false);
+                    let currentBackgroundImage = currentStyle.backgroundImage;
+                    let newBackgroundImage = currentBackgroundImage.substring(0, currentBackgroundImage.lastIndexOf("/")) + "/" + newSrc + "\")";
+                    document.querySelector(".project-paramour").style.backgroundImage = newBackgroundImage;
+                };
+            }
         });
     </script>
 </head>
@@ -675,9 +700,29 @@
         <div class="project-paramour">
             <div class="mask"></div>
             <div class="inner">
-                <h1 class="S">Project Paramour</h1>
-                <div>
-                    Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
+                <div class="number-1 data active" data-src="image-hero-paramour.jpg">
+                    <h1 class="S">Project Paramour</h1>
+                    <div>
+                        Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
+                    </div>
+                </div>
+                <div class="number-2 data" data-src="image-hero-seraph.jpg">
+                    <h1 class="S">Seraph Station</h1>
+                    <div>
+                        The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.
+                    </div>
+                </div>
+                <div class="number-3 data" data-src="image-hero-federal.jpg">
+                    <h1 class="S">Federal II Tower</h1>
+                    <div>
+                        A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.
+                    </div>
+                </div>
+                <div class="number-4 data" data-src="image-hero-trinity.jpg">
+                    <h1 class="S">Trinity Bank Tower</h1>
+                    <div>
+                        Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.
+                    </div>
                 </div>
                 <button class="default">
                     <span style="margin-right: 1.6rem; font-weight: bold;">See Our Portfolio</span>
@@ -685,10 +730,10 @@
                 </button>
             </div>
             <div class="number-button-container">
-                <button class="default number active">01</button>
-                <button class="default number">02</button>
-                <button class="default number">03</button>
-                <button class="default number">04</button>
+                <button data-ref="number-1" class="default number active">01</button>
+                <button data-ref="number-2" class="default number">02</button>
+                <button data-ref="number-3" class="default number">03</button>
+                <button data-ref="number-4" class="default number">04</button>
             </div>
         </div>
         <div class="welcome-to-arch-studio">
