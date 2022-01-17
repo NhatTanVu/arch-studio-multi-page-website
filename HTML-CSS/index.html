@@ -59,6 +59,10 @@
                 height: 2.6666rem;
             }
 
+            header > #burger {
+                display: none;
+            }
+
         .project-paramour {
             background-image: url('./assets/home/desktop/image-hero-paramour.jpg');
             background-repeat: no-repeat;
@@ -220,6 +224,10 @@
                     left: 2.6666rem;
                 }
 
+            .featured-projects > button {
+                display: none;
+            }
+
         footer {
             position: relative;
             height: 13.3333rem;
@@ -252,7 +260,7 @@
 
             footer > button {
                 position: absolute;
-                right: 0
+                right: 0;
             }
 
         /* ------------------- */
@@ -368,21 +376,13 @@
                 }
 
             footer {
-                position: relative;
                 height: 8rem;
-                align-items: center;
                 margin-left: -6.4666rem;
                 margin-right: -6.5333rem;
             }
 
                 footer > .logo {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                     width: 8rem;
-                    height: 100%;
-                    background-color: var(--very-dark-blue);
-                    justify-content: center;
                 }
 
                     footer > .logo > svg {
@@ -393,17 +393,241 @@
                     flex: 0 0 32.8rem;
                     margin-left: 8rem;
                     padding-left: 2.6666rem;
-                    height: 100%;
-                    background-color: var(--very-light-grey);
-                    align-items: center;
+                }
+        }
+
+        /* ------------------- */
+        /* Mobile view         */
+        /* ------------------- */
+        @media only screen and (max-width : 767px) {
+            .container {
+                padding: 0 2.1333rem;
+            }
+
+            header {
+                margin: 2.1333rem 0;
+                justify-content: space-between;
+            }
+
+                header > .bookmark {
+                    display: none;
                 }
 
-                footer > button {
+                header > .logo {
+                    margin-right: 0;
+                    height: 2.1333rem;
+                }
+
+                header > nav {
+                    display: none;
+                }
+
+                    header > nav.opened {
+                        display: block;
+                        position: absolute;
+                        width: 22.8666rem;
+                        right: -2.1333rem;
+                        top: 4.25rem;
+                        background-color: var(--very-light-grey);
+                        z-index: 11;
+                        padding: 3.2rem;
+                    }
+
+                        header > nav.opened > ul.navigation-bar > li {
+                            display: block;
+                            margin-right: 0;
+                        }
+
+                            header > nav.opened > ul.navigation-bar > li:not(:last-child) {
+                                margin-bottom: 2.1333rem;
+                            }
+
+                            header > nav.opened > ul.navigation-bar > li > a {
+                                color: var(--very-dark-blue);
+                                width: 100%;
+                                display: inline-block;
+                            }
+
+                header > #burger {
+                    display: block;
+                }
+
+            .project-paramour {
+                background-image: url('./assets/home/mobile/image-hero-paramour.jpg');
+                padding: 7.333rem 0 7.333rem 2.1333rem;
+                margin: 0 -2.1333rem 4.8rem -2.1333rem;
+            }
+
+                .project-paramour > .inner {
+                    width: 20.7333rem;
+                }
+
+                    .project-paramour > .inner > h1.S {
+                        width: 100%;
+                        color: inherit;
+                        margin-bottom: 1rem;
+                    }
+
+                    .project-paramour > .inner > div {
+                        width: 100%;
+                        margin-bottom: 3.8rem;
+                    }
+
+                .project-paramour > .number-button-container {
+                    display: none;
+                }
+
+            .welcome-to-arch-studio {
+                margin-bottom: 6.4666rem;
+            }
+
+                .welcome-to-arch-studio::before {
+                    display: block;
+                    content: '';
+                    width: 4.3333rem;
+                    height: 0;
+                    top: 0;
+                    left: 0;
+                    border-bottom: 0.0666rem solid var(--light-grey);
+                }
+
+                .welcome-to-arch-studio > h1.L {
+                    display: none;
+                }
+
+                .welcome-to-arch-studio > .inner > .left {
+                    padding: 4.5333rem 0 0 0;
+                }
+
+                    .welcome-to-arch-studio > .inner > .left > .inner {
+                        width: auto;
+                    }
+
+                        .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                            width: auto;
+                        }
+
+                        .welcome-to-arch-studio > .inner > .left > .inner > div {
+                            width: auto;
+                            font-weight: 500;
+                        }
+
+                .welcome-to-arch-studio > .inner > .right {
+                    display: none;
+                }
+
+            .small-team-big-ideas {
+                background-image: url('./assets/home/mobile/image-small-team.jpg');
+                padding: 12rem 0 12rem 2.1333rem;
+                margin: 0 -2.1333rem 4.8rem -2.1333rem;
+            }
+
+                .small-team-big-ideas > .inner {
+                    width: 20.7333rem;
+                }
+
+                    .small-team-big-ideas > .inner > h2 {
+                        margin-bottom: 2.1333rem;
+                    }
+
+            .featured {
+                margin-bottom: 3.2rem;
+            }
+
+                .featured > button {
+                    display: none;
+                }
+
+            .featured-projects {
+                height: auto;
+                --gap: 1.6rem;
+                flex-direction: column;
+                margin-bottom: 8.8rem;
+            }
+
+                .featured-projects > .project:nth-of-type(1) {
+                    background-image: url('./assets/portfolio/mobile/image-del-sol.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(2) {
+                    background-image: url('./assets/portfolio/mobile/image-228b.jpg');
+                }
+
+                .featured-projects > .project:nth-of-type(3) {
+                    background-image: url('./assets/portfolio/mobile/image-prototype.jpg');
+                }
+
+                .featured-projects > .project > h1.L {
+                    display: none;
+                }
+
+                .featured-projects > .project > .mask {
+                    top: 0;
+                    height: 100%;
+                }
+
+                .featured-projects > .project {
+                    flex: 0 0 16rem;
+                }
+
+                .featured-projects > button {
+                    display: block;
+                    width: 100%;
+                }
+
+            footer {
+                height: auto;
+                justify-content: center;
+                margin: 0 -2.1333rem;
+            }
+
+                footer > .logo {
                     position: absolute;
-                    right: 0
+                    top: -4rem;
+                    left: auto;
+                    width: 8rem;
+                    height: 8rem;
+                }
+
+                    footer > .logo > svg {
+                        flex: 0 0 3.8466rem;
+                    }
+
+                footer > nav {
+                    flex: 1;
+                    margin-left: 0;
+                    padding: 6.1333rem 0 10.1333rem 0;
+                    height: auto;
+                    flex-direction: column;
+                }
+
+                    footer > nav > ul.navigation-bar > li {
+                        display: block;
+                        margin-right: 0;
+                    }
+
+                        footer > nav > ul.navigation-bar > li:not(:last-child) {
+                            margin: 0 0 2.1333rem 0;
+                        }
+
+                footer > button {
+                    bottom: 3.2rem;
+                    right: auto;
                 }
         }
     </style>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("burger").onclick = (e) => {
+                e.currentTarget.classList.toggle('opened');
+                if (e.currentTarget.classList.contains('opened'))
+                    e.currentTarget.src = './assets/icons/icon-close.svg';
+                else
+                    e.currentTarget.src = './assets/icons/icon-hamburger.svg';
+                e.currentTarget.previousElementSibling.classList.toggle('opened');
+            };
+        });
+    </script>
 </head>
 <body class="container">
     <header class="flex">
@@ -419,6 +643,7 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
+        <img id="burger" class="burger" src="./assets/icons/icon-hamburger.svg" alt="burger menu" />
     </header>
     <main>
         <div class="project-paramour">
@@ -500,6 +725,10 @@
                     <div style="opacity: 0.75;">View All Projects</div>
                 </div>
             </div>
+            <button class="default">
+                <span style="margin-right: 1.6rem; font-weight: bold;">See All</span>
+                <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+            </button>
         </div>
     </main>
     <footer class="flex">
