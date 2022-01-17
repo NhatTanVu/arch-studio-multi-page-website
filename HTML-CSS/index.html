@@ -64,7 +64,7 @@
                 top: 4.25rem;
                 left: -2.1333rem;
                 right: -2.1333rem;
-                height: calc(100vh - 6.4rem);
+                height: 234.39666rem;
                 position: absolute;
                 z-index: 1;
                 background-color: var(--black);
@@ -654,12 +654,12 @@
                 e.currentTarget.previousElementSibling.previousElementSibling.classList.toggle('opened');
             };
 
-            let body = document.body, html = document.documentElement;
-            let bodyHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-            function convertRemToPixels(rem) {
-                return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-            }
-            document.getElementById("header-mask").style.height = (bodyHeight - convertRemToPixels(6.4)) + "px";
+            //let body = document.body, html = document.documentElement;
+            //let bodyHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+            //function convertRemToPixels(rem) {
+                //return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+            //}
+            //document.getElementById("header-mask").style.height = (bodyHeight - convertRemToPixels(6.4)) + "px";
 
             let numberButtons = document.querySelectorAll(".number-button-container button.number");
             for (let i = 0; i < numberButtons.length; i++) {
