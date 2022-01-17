@@ -299,10 +299,6 @@ ul.navigation-bar {
         font-size: 4vmin; /* 15px for 375px-viewport */
     }
 
-    body {
-        line-height: 1.667rem; /* 25px */
-    }
-
     .container {
         padding: 0 1.6rem 5.866rem 1.6rem;
     }
