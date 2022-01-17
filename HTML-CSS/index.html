@@ -666,7 +666,7 @@
                 numberButtons[i].onclick = (e) => {
                     document.querySelector(".number-button-container button.number.active").classList.remove("active");
                     e.currentTarget.classList.add("active");
-                    let ref = e.currentTarget.dataset.ref;
+                    let ref = "number-" + e.currentTarget.dataset.order;
                     document.querySelector(".project-paramour .data.active").classList.remove("active");
                     document.querySelector(".project-paramour ." + ref).classList.add("active");
                     let newSrc = document.querySelector(".project-paramour ." + ref).dataset.src;
@@ -676,6 +676,14 @@
                     document.querySelector(".project-paramour").style.backgroundImage = newBackgroundImage;
                 };
             }
+
+            sliderInterval = window.setInterval(() => {
+                currentNumberButton = document.querySelector(".number-button-container button.number.active");
+                let currentOrder = parseInt(currentNumberButton.dataset.order);
+                let nextOrder = (currentOrder < 4) ? (currentOrder + 1) : 1;
+                nextNumberButton = document.querySelector(".number-button-container button.number[data-order=\"" + nextOrder + "\"]");
+                nextNumberButton.click();
+            }, 5000);
         });
     </script>
 </head>
@@ -730,10 +738,10 @@
                 </button>
             </div>
             <div class="number-button-container">
-                <button data-ref="number-1" class="default number active">01</button>
-                <button data-ref="number-2" class="default number">02</button>
-                <button data-ref="number-3" class="default number">03</button>
-                <button data-ref="number-4" class="default number">04</button>
+                <button data-order=1 class="default number active">01</button>
+                <button data-order=2 class="default number">02</button>
+                <button data-order=3 class="default number">03</button>
+                <button data-order=4 class="default number">04</button>
             </div>
         </div>
         <div class="welcome-to-arch-studio">
