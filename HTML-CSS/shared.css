@@ -109,6 +109,7 @@ h3 {
     --gap: 0;
 }
 
+a,
 button {
     border: none;
     outline: none;
@@ -117,6 +118,9 @@ button {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
+    text-decoration: inherit; /* no underline */
+    display: inline-block;
+    text-align: center;
 }
 
     button:hover,
@@ -124,21 +128,26 @@ button {
         cursor: pointer;
     }
 
+    a.default,
     button.default {
         color: var(--white);
         padding: 1.6rem 2.1333rem;
         background-color: var(--very-dark-blue);
     }
 
+        a.default:hover,
+        a.default:focus,
         button.default:hover,
         button.default:focus {
             background-color: var(--dark-grey);
         }
 
+        a.default.active,
         button.default.active {
             background-color: var(--light-grey);
         }
 
+        a.default.icon,
         button.default.icon {
             padding: 0;
             width: 5.3333rem;
@@ -148,6 +157,7 @@ button {
             align-items: center;
         }
 
+        a.default.number,
         button.default.number {
             padding: 0;
             width: 5.3333rem;
@@ -158,12 +168,14 @@ button {
             background-color: var(--white);
             color: var(--medium-grey);
         }
-
+            a.default.number:hover,
+            a.default.number:focus,
             button.default.number:hover,
             button.default.number:focus {
                 background-color: var(--very-light-grey);
             }
 
+            a.default.number.active,
             button.default.number.active {
                 background-color: var(--very-dark-blue);
                 color: var(--white);
