@@ -1,62 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arch Studio Website Challenge | Portfolio" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+
+    <!-- async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+    </noscript>
+
+    <title>Arch Studio Website Challenge | Portfolio</title>
+
+    <link rel="stylesheet" href="shared.css">
+    <script src="shared.js"></script>
+
+    <style>
+        header > .bookmark {
+            top: 8.5rem;
+            left: -18.7rem;
+        }
+
+        .projects > .project {
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: auto;
+            color: inherit;
+            text-align: left;
+        }
+
+            .projects > .project > .mask {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 50%;
+            }
+
+            .projects > .project > .inner {
+                position: absolute;
+                bottom: 2.6666rem;
+                left: 2.6666rem;
+            }
+
+                .projects > .project > .inner > .name {
+                    font-weight: bold;
+                    margin-bottom: 0.2666rem;
+                }
+
+                .projects > .project > .inner > .date {
+                    opacity: 0.75;
+                }
+
+        @media only screen and (min-width : 768px) and (max-width : 1023px) {
+            header > .bookmark {
+                left: -15.8666rem;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+        }
+    </style>
+    <script></script>
 </head>
-<body>
+<body class="container">
 
-  Portfolio
+    <header class="flex">
+        <div class="flex bookmark">
+            <span class="line"></span>
+            <span class="text">PORTFOLIO</span>
+        </div>
+        <img class="logo" src="./assets/logo.svg" />
+        <nav>
+            <ul class="navigation-bar">
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="header-mask"></div>
+        <img id="burger" class="burger" src="./assets/icons/icon-hamburger.svg" alt="burger menu" />
+    </header>
 
-  Portfolio
-  About Us
-  Contact
+    <main>
+        <div class="projects grid" style="row-gap: 2.1333rem; column-gap: 2rem; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 37.3333rem; margin-bottom: 10.6666rem; color: var(--white);">
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-seraph.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Seraph Station</div>
+                    <div class="date">September 2019</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-eebox.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Eebox Building</div>
+                    <div class="date">August 2017</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-federal.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Federal II Tower</div>
+                    <div class="date">March 2017</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-del-sol.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Project Del Sol</div>
+                    <div class="date">January 2016</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-prototype.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Le Prototype</div>
+                    <div class="date">October 2015</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-228b.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">228B Tower</div>
+                    <div class="date">April 2015</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-edelweiss.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Grand Edelweiss Hotel</div>
+                    <div class="date">December 2013</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-netcry.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Netcry Tower</div>
+                    <div class="date">August 2012</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-hypers.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Hypers</div>
+                    <div class="date">January 2012</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-sxiv.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">SXIV Tower</div>
+                    <div class="date">March 2011</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-trinity.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Trinity Bank Tower</div>
+                    <div class="date">September 2010</div>
+                </div>
+            </a>
+            <a class="project" style="background-image: url('./assets/portfolio/desktop/image-paramour.jpg');" href="#">
+                <div class="mask"></div>
+                <div class="inner">
+                    <div class="name">Project Paramour</div>
+                    <div class="date">February 2008</div>
+                </div>
+            </a>
+        </div>
+    </main>
 
-  Seraph Station
-  September 2019
-
-  Eebox Building
-  August 2017
-
-  Federal II Tower
-  March 2017
-
-  Project Del Sol
-  January 2016
-
-  Le Prototype
-  October 2015
-
-  228B Tower
-  April 2015
-
-  Grand Edelweiss Hotel
-  December 2013
-
-  Netcry Tower
-  August 2012
-
-  Hypers
-  January 2012
-
-  SXIV Tower
-  March 2011
-
-  Trinity Bank Tower
-  September 2010
-
-  Project Paramour
-  February 2008
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
+    <footer class="flex">
+        <div class="flex logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 40"><path d="M10.822 39.27l2.26-6.256h13.836l2.26 6.255H40L24.658 1.6h-9.316L0 39.268h10.822zM23.493 24.2h-6.986L20 15.252l3.493 8.95zm21.804 15.07V27.807c0-.776.22-1.499.662-2.169a5.14 5.14 0 011.746-1.632A4.51 4.51 0 0150 23.379c.64 0 1.343.13 2.112.388.769.259 1.434.601 1.998 1.028l3.972-7.991c-.654-.487-1.484-.883-2.488-1.188-1.005-.304-1.956-.456-2.854-.456-1.385 0-2.729.354-4.03 1.061-1.301.708-2.44 1.694-3.413 2.957V15.89h-9.498v23.38h9.498zm18.995.73c1.507 0 2.942-.21 4.304-.628 1.362-.418 2.439-.91 3.23-1.472l-3.105-6.393c-.289.198-.688.377-1.198.536-.51.16-1.07.24-1.678.24-.99 0-1.85-.217-2.58-.65a4.449 4.449 0 01-1.678-1.724 4.806 4.806 0 01-.582-2.33c0-.669.163-1.369.49-2.1.328-.73.845-1.347 1.553-1.849s1.625-.753 2.751-.753c1.187 0 2.161.258 2.922.776l3.105-6.393c-.76-.578-1.841-1.073-3.242-1.484a15.324 15.324 0 00-4.337-.616c-1.903 0-3.665.346-5.286 1.039-1.62.692-3.029 1.628-4.224 2.808a13.053 13.053 0 00-2.785 3.995 11.177 11.177 0 00-.993 4.6c0 1.69.354 3.285 1.062 4.784.707 1.5 1.678 2.82 2.91 3.961a13.79 13.79 0 004.258 2.683c1.606.647 3.307.97 5.103.97zm14.703-.73V26.392c0-.792.16-1.477.48-2.055a3.374 3.374 0 011.347-1.347c.578-.32 1.248-.48 2.01-.48 1.156 0 2.084.354 2.784 1.062.7.708 1.05 1.648 1.05 2.82v12.876h9.498V24.338c0-1.75-.41-3.314-1.232-4.692a9.088 9.088 0 00-3.345-3.276c-1.408-.807-3.003-1.21-4.783-1.21-1.4 0-2.782.255-4.144.765a12.064 12.064 0 00-3.665 2.157V0h-9.497v39.27h9.497z" /></svg>
+        </div>
+        <nav class="flex">
+            <ul class="navigation-bar">
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="default" href="./portfolio.html">
+            <span style="margin-right: 1.6rem; font-weight: bold;">See Our Portfolio</span>
+            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+        </a>
+    </footer>
 
 </body>
 </html>
