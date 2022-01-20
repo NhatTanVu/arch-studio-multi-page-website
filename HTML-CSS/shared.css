@@ -169,6 +169,7 @@ button {
             background-color: var(--white);
             color: var(--medium-grey);
         }
+
             a.default.number:hover,
             a.default.number:focus,
             button.default.number:hover,
@@ -274,6 +275,7 @@ ul.navigation-bar {
 
     ul.navigation-bar > li {
         display: inline-block;
+        position: relative;
     }
 
         ul.navigation-bar > li:not(:last-child) {
@@ -289,6 +291,20 @@ ul.navigation-bar {
             ul.navigation-bar > li > a:focus {
                 color: var(--very-dark-blue);
             }
+
+        ul.navigation-bar > li.active > a {
+            color: var(--very-dark-blue);
+        }
+
+        ul.navigation-bar > li.active::after {
+            content: '';
+            border-bottom: 0.0666rem solid var(--very-dark-blue);
+            width: 1.6rem;
+            display: block;
+            left: 0;
+            right: 0;
+            margin: 0.4666rem auto 0 auto;
+        }
 
 header {
     margin: 3.7333rem 0;
