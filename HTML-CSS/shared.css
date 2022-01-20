@@ -275,8 +275,12 @@ ul.navigation-bar {
 
     ul.navigation-bar > li {
         display: inline-block;
-        position: relative;
+        position: relative;        
     }
+
+        ul.navigation-bar > li:not(.active) {
+            margin-bottom: 0.5332rem;
+        }
 
         ul.navigation-bar > li:not(:last-child) {
             margin-right: 3.7333rem;
