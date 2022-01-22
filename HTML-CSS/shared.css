@@ -348,7 +348,7 @@ header {
         right: -2.1333rem;
         height: 234.89086rem;
         position: absolute;
-        z-index: 1;
+        z-index: 10;
         background-color: var(--black);
         opacity: 0.5;
     }
