@@ -132,7 +132,9 @@ button {
     a.default,
     button.default {
         color: var(--white);
-        padding: 1.6rem 2.1333rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: var(--very-dark-blue);
     }
 
@@ -183,6 +185,17 @@ button {
                 color: var(--white);
             }
 
+        a.default > span {
+            margin-right: 1.6rem;
+            font-weight: bold;
+        }
+
+        a.default > svg {
+            stroke: var(--white);
+            width: 1.6rem;
+            height: 1.2rem;
+        }
+
 .number-button-container {
     display: flex;
     --gap: 0;
@@ -201,6 +214,7 @@ input[type=text].default {
     font-family: inherit;
     font-weight: bold;
     resize: none;
+    display: block;
 }
 
     textarea.default::placeholder,
@@ -275,7 +289,7 @@ ul.navigation-bar {
 
     ul.navigation-bar > li {
         display: inline-block;
-        position: relative;        
+        position: relative;
     }
 
         ul.navigation-bar > li:not(.active) {
@@ -346,7 +360,7 @@ header {
         top: 4.25rem;
         left: -2.1333rem;
         right: -2.1333rem;
-        height: 234.89086rem;
+        height: 234.44953rem;
         position: absolute;
         z-index: 10;
         background-color: var(--black);
@@ -390,7 +404,11 @@ footer {
     footer > a {
         position: absolute;
         right: 0;
+        width: 16.8rem;
+        height: 4.8rem;
     }
+
+
 
 /* ------------------- */
 /* Tablet view         */
