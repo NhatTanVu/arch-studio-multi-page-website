@@ -216,6 +216,7 @@ input[type=text].default {
     resize: none;
     display: block;
     margin: 0;
+    border-radius: 0;
 }
 
     textarea.default::placeholder,
