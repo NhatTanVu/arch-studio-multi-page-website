@@ -32,6 +32,10 @@
             left: -17.1rem;
         }
 
+        header > #header-mask {
+            height: 192.6882rem;
+        }
+
         .separator {
             position: absolute;
             top: 0;
@@ -93,6 +97,10 @@
                         margin: 5rem 0 3.7333rem 0;
                     }
 
+                    .tell-us > .content > .inner > .description {
+                        font-weight: 500;
+                    }
+
         .contact-details {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr;
@@ -108,22 +116,22 @@
                 font-weight: bold;
             }
 
-            .contact-details > .office > .details {
+            .contact-details > .office > div.vertical-flex > .details {
                 margin-bottom: 2.1333rem;
             }
 
-            .contact-details > .office > a {
+            .contact-details > .office > div.vertical-flex > a {
                 color: var(--very-dark-blue);
                 display: flex;
                 align-items: center;
             }
 
-                .contact-details > .office > a > span {
+                .contact-details > .office > div.vertical-flex > a > span {
                     margin-right: 1.6rem;
                     font-weight: bold;
                 }
 
-                .contact-details > .office > a > svg {
+                .contact-details > .office > div.vertical-flex > a > svg {
                     stroke: var(--very-dark-blue);
                     width: 1.6rem;
                     height: 1.2rem;
@@ -133,27 +141,26 @@
             background-image: url('./assets/contact/desktop/image-map.png');
             background-repeat: no-repeat;
             background-size: cover;
-            width: 100%;
             height: 37.3333rem;
             margin-bottom: 10.6666rem;
         }
 
-        .connect-with-us-form {
+        .connect-with-us {
             --gap: 2rem;
             margin-bottom: 16rem;
         }
 
-            .connect-with-us-form > .title {
+            .connect-with-us > .title {
                 flex: 0 0 23.3333rem;
             }
 
-            .connect-with-us-form > form {
+            .connect-with-us > form {
                 --gap: 2.6666rem;
                 flex: 1;
                 position: relative;
             }
 
-                .connect-with-us-form > form > button {
+                .connect-with-us > form > button {
                     position: absolute;
                     right: 0;
                     top: 100%;
@@ -161,11 +168,212 @@
                     height: 5.3333rem;
                 }
 
-                    .connect-with-us-form > form > button > svg {
+                    .connect-with-us > form > button > svg {
                         stroke: var(--white);
                         width: 1.6rem;
                         height: 1.2rem;
                     }
+
+        /* ------------------- */
+        /* Tablet view         */
+        /* ------------------- */
+        @media only screen and (min-width : 768px) and (max-width : 1023px) {
+            header > .bookmark {
+                left: -14.2666rem;
+            }
+
+            .tell-us > h1.L {
+                top: 12.6rem;
+            }
+
+            .tell-us > .image-hero {
+                background-image: url('./assets/contact/tablet/image-hero.jpg');
+                width: 100%;
+            }
+
+            .tell-us > .content {
+                position: absolute;
+                bottom: -0.0666rem;
+                right: -6.5333rem;
+                height: 28.7333rem;
+                width: 40.8666rem;
+            }
+
+                .tell-us > .content > .inner {
+                    right: 6.5333rem;
+                    width: 30.4rem;
+                }
+
+                    .tell-us > .content > .inner > h2 {
+                        margin: 5rem 0 3.7333rem 0;
+                    }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                column-gap: 0;
+                row-gap: 0;
+            }
+
+                .contact-details > :nth-of-type(2) {
+                    margin-top: 4.2666rem;
+                }
+
+                .contact-details > :nth-of-type(3) {
+                    margin-top: 2.6666rem;
+                }
+
+                .contact-details > .office > div.vertical-flex {
+                    flex-direction: row;
+                    --gap: 4.3333rem;
+                    justify-content: space-between;
+                }
+
+                    .contact-details > .office > div.vertical-flex > .details {
+                        margin-bottom: 0;
+                    }
+
+                    .contact-details > .office > div.vertical-flex > a {
+                        color: var(--very-dark-blue);
+                        display: flex;
+                        align-items: center;
+                    }
+
+                        .contact-details > .office > div.vertical-flex > a > span {
+                            margin-right: 1.6rem;
+                            font-weight: bold;
+                        }
+
+                        .contact-details > .office > div.vertical-flex > a > svg {
+                            stroke: var(--very-dark-blue);
+                            width: 1.6rem;
+                            height: 1.2rem;
+                        }
+
+            .map {
+                background-image: url('./assets/contact/tablet/image-map.png');
+                margin-bottom: 13.3333rem;
+            }
+
+            .connect-with-us {
+                flex-direction: column;
+                margin-bottom: 18.6666rem;
+                --gap: 0;
+            }
+
+                .connect-with-us > .title {
+                    flex: 0;
+                    margin-bottom: 4.2666rem;
+                }
+        }
+
+        /* ------------------- */
+        /* Mobile view         */
+        /* ------------------- */
+        @media only screen and (max-width : 767px) {
+            .tell-us {
+                height: 35.5333rem;
+                margin-bottom: 4.8rem;
+            }
+
+                .tell-us > h1.L {
+                    display: none;
+                }
+
+                .tell-us > .image-hero {
+                    background-image: url('./assets/contact/mobile/image-hero.jpg');
+                    width: auto;
+                    height: 16rem;
+                    left: -2.1333rem;
+                    right: -2.1333rem;
+                    top: 0;
+                }
+
+                .tell-us > .content {
+                    position: absolute;
+                    bottom: 0;
+                    left: -2.1333rem;
+                    right: 0;
+                    height: 22.5333rem;
+                    width: auto;
+                }
+
+                    .tell-us > .content > .inner {
+                        left: 2.1333rem;
+                        right: 0;
+                        bottom: 0;
+                        width: auto;
+                    }
+
+                        .tell-us > .content > .inner > .separator {
+                            display: none;
+                        }
+
+                        .tell-us > .content > .inner > h2 {
+                            margin: 5.3333rem 0 0.8rem 0;
+                        }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                column-gap: 0;
+                row-gap: 0;
+                padding-top: 4.5333rem;
+            }
+
+                .contact-details > :nth-of-type(2) {
+                    margin-top: 3.2rem;
+                }
+
+                .contact-details > :nth-of-type(3) {
+                    margin-top: 2.6666rem;
+                }
+
+                .contact-details > .title {
+                    width: 70%;
+                }
+
+                    .contact-details > .office > div.vertical-flex > .details {
+                        margin-bottom: 0;
+                    }
+
+                    .contact-details > .office > div.vertical-flex > a {
+                        color: var(--very-dark-blue);
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1.0666rem;
+                        line-height: 1.6666rem;
+                    }
+
+                        .contact-details > .office > div.vertical-flex > a > span {
+                            margin-right: 1.6rem;
+                            font-weight: bold;
+                        }
+
+                        .contact-details > .office > div.vertical-flex > a > svg {
+                            stroke: var(--very-dark-blue);
+                            width: 1.6rem;
+                            height: 1.2rem;
+                        }
+
+            .map {
+                background-image: url('./assets/contact/mobile/image-map.png');
+                margin: 0 -2.1333rem 4.8rem -2.1333rem;
+                height: 24.4666rem;
+            }
+
+            .connect-with-us {
+                flex-direction: column;
+                margin-bottom: 14.1333rem;
+                --gap: 0;
+            }
+
+                .connect-with-us > .title {
+                    flex: 0;
+                    margin-bottom: 3.2rem;
+                    width: 70%;
+                }
+        }
     </style>
 </head>
 <body class="container">
@@ -195,7 +403,7 @@
                 <div class="inner">
                     <div class="separator"></div>
                     <h2 style="">Tell us about your project</h2>
-                    <div style="font-weight: 500;">We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</div>
+                    <div class="description">We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!</div>
                 </div>
             </div>
         </div>
@@ -204,31 +412,35 @@
             <h2 class="title">Contact Details</h2>
             <div class="office">
                 <div class="title">Main Office</div>
-                <div class="details">
-                    <span>Mail :  archone@mail.com</span><br />
-                    <span>Address :  1892 Chenoweth Drive TN</span><br />
-                    <span>Phone :  123-456-3451</span>
+                <div class="vertical-flex">
+                    <div class="details">
+                        <span>Mail :  archone@mail.com</span><br />
+                        <span>Address :  1892 Chenoweth Drive TN</span><br />
+                        <span>Phone :  123-456-3451</span>
+                    </div>
+                    <a href="#">
+                        <span>View on Map</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                    </a>
                 </div>
-                <a href="#">
-                    <span>View on Map</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
-                </a>
             </div>
             <div class="office">
                 <div class="title">Office II</div>
-                <div class="details">
-                    <span>Mail :  archtwo@mail.com</span><br />
-                    <span>Address :  3399 Wines Lane TX</span><br />
-                    <span>Phone :  832-123-4321</span>
+                <div class="vertical-flex">
+                    <div class="details">
+                        <span>Mail :  archtwo@mail.com</span><br />
+                        <span>Address :  3399 Wines Lane TX</span><br />
+                        <span>Phone :  832-123-4321</span>
+                    </div>
+                    <a href="#">
+                        <span>View on Map</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                    </a>
                 </div>
-                <a href="#">
-                    <span>View on Map</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
-                </a>
             </div>
         </div>
         <div class="map"></div>
-        <div class="connect-with-us-form flex">
+        <div class="connect-with-us flex">
             <h2 class="title">Connect with us</h2>
             <form class="vertical-flex">
                 <div>
@@ -240,7 +452,7 @@
                     <span class="error"></span>
                 </div>
                 <div>
-                    <textarea type="text" class="default" placeholder="Message" rows="4"></textarea>
+                    <textarea type="text" class="default" placeholder="Message" rows="3"></textarea>
                     <span class="error"></span>
                 </div>
                 <button class="default">
