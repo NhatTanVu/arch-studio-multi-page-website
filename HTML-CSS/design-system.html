@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+
+    <!-- async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap">
+    </noscript>
+
+    <title>Arch Studio Website Challenge | Design System</title>
+
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        html {
+            font-size: 1.46484375vw; /* 15px for 1024px-viewport */
+        }
+
+        .container {
+            padding: 0 6.6666rem;
+        }
+    </style>
+</head>
+<body class="container">
+    <header class="flex" style="margin: 4.8rem -6.6666rem 6.4rem 0; justify-content: space-between;">
+        <img src="./assets/logo.svg" />
+        <div class="right flex" style="color: var(--light-grey); align-items: center;">
+            <div style="text-transform: uppercase; letter-spacing: 1rem;">DESIGN SYSTEM</div>
+            <div style="width: 6.6666rem; border-bottom: 1px solid var(--light-grey);"></div>
+        </div>
+    </header>
+    <main>
+        <div id="section-01" style="margin-bottom: 7.4666rem;">
+            <div class="section-title" style="position: relative; height: 8rem; font-weight: bold; margin-bottom: 2.1333rem;">
+                <div style="margin-left: -6.6666rem; line-height: 8rem; font-size: 8rem; color: var(--very-light-grey); letter-spacing: -0.285714rem; position: absolute; top: 0; left: 0; z-index: -1;">01</div>
+                <div style="color: var(--very-dark-blue); font-size: 2.6666rem; line-height: 3.7333rem; margin-top: 1.8rem; display: inline-block;">Colors</div>
+            </div>
+            <div class="section-content vertical-flex" style="justify-content: space-between; --gap: 4.2666rem; font-size: 0.8666rem; line-height: 1.5333rem; white-space: nowrap;">
+                <div class="row flex" style="justify-content: space-between; --gap: 2.8rem;">
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--very-dark-blue);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Very Dark Blue</div>
+                            <div>HEX: #1B1D23</div>
+                            <div>RGB: rgb(27, 29, 35)</div>
+                            <div>HSL: hsl(225, 13%, 12%)</div>
+                        </div>
+                    </div>
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--dark-grey);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Dark Grey</div>
+                            <div>HEX: #60636D</div>
+                            <div>RGB: rgb(96, 99, 109)</div>
+                            <div>HSL: hsl(226, 6%, 40%)</div>
+                        </div>
+                    </div>
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--medium-grey);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Medium Grey</div>
+                            <div>HEX: #7D828F</div>
+                            <div>RGB: rgb(125, 130, 143)</div>
+                            <div>HSL: hsl(223, 7%, 53%)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex" style="justify-content: space-between; --gap: 2.8rem;">
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--light-grey);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Light Grey</div>
+                            <div>HEX: #C8CCD8</div>
+                            <div>RGB: rgb(200, 204, 216)</div>
+                            <div>HSL: hsl(225, 17%, 82%)</div>
+                        </div>
+                    </div>
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--very-light-grey);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Very Light Grey</div>
+                            <div>HEX: #EEEFF4</div>
+                            <div>RGB: rgb(238, 239, 244)</div>
+                            <div>HSL: hsl(230, 21%, 95%)</div>
+                        </div>
+                    </div>
+                    <div class="flex" style="flex: 1; --gap: 1.6rem;">
+                        <div style="flex: 0 0 3.2rem; background-color: var(--red-errors);"></div>
+                        <div style="flex: 1;">
+                            <div style="color: var(--very-dark-blue); font-weight: bold; margin-bottom: 0.5333rem;">Red (Errors)</div>
+                            <div>HEX: #DF5656</div>
+                            <div>RGB: rgb(223, 86, 86)</div>
+                            <div>HSL: hsl(0, 68%, 61%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-02" style="margin-bottom: 7.4666rem;">
+            <div class="section-title" style="position: relative; height: 8rem; font-weight: bold; margin-bottom: 2.1333rem;">
+                <div style="margin-left: -6.6666rem; line-height: 8rem; font-size: 8rem; color: var(--very-light-grey); letter-spacing: -0.285714rem; position: absolute; top: 0; left: 0; z-index: -1;">02</div>
+                <div style="color: var(--very-dark-blue); font-size: 2.6666rem; line-height: 3.7333rem; margin-top: 1.8rem; display: inline-block;">Typography</div>
+            </div>
+            <div class="section-content vertical-flex" style="--gap: 2.1333rem;">
+                <div class="group-1">
+                    <div style="text-transform: uppercase; margin-bottom: 1.6rem; color: var(--light-grey); font-weight: bold; font-size: 1.0666rem; line-height: 1.8666rem; letter-spacing: 0.3333rem;">Font Family</div>
+                    <div class="flex" style="--gap: 0.9333rem; color: var(--very-dark-blue);">
+                        <div style="flex: 1; font-size: 1.6rem; line-height: 3.2rem; font-weight: bold; letter-spacing: -0.0714rem;">
+                            Spartan
+                        </div>
+                        <div style="flex: 1; font-size: 1.3333rem; line-height: 2.1333rem; text-transform: uppercase;">
+                            <b>a b c d e f g h i j k l m n o p q r s t u v w x y z</b>
+                            <span> a b c d e f g h i j k l m n o p q r s t u v w x y z !@#$%^&*()</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-2 flex" style="--gap: 0.9333rem;">
+                    <div style="flex: 1">
+                        <div style="text-transform: uppercase; margin-bottom: 2.1333rem; color: var(--light-grey); font-weight: bold; font-size: 1.0666rem; line-height: 1.8666rem; letter-spacing: 0.3333rem;">Headings</div>
+                        <div style="margin-bottom: 2.1333rem;">
+                            <div style="margin-bottom: 0.5333rem; font-weight: bold; font-size: 0.8666rem; line-height: 1.5333rem; color: var(--dark-grey);">H1 (L); Spartan Bold; 200px; 200px Line; -5 Character</div>
+                            <h1 class="L">
+                                Aa
+                            </h1>
+                        </div>
+                        <div style="margin-bottom: 2.1333rem;">
+                            <div style="margin-bottom: 0.5333rem; font-weight: bold; font-size: 0.8666rem; line-height: 1.5333rem; color: var(--dark-grey);">H1 (S); Spartan Bold; 80px; 80px Line; -2 Character</div>
+                            <h1 class="S">
+                                Spartan<br />Bold
+                            </h1>
+                        </div>
+                        <div style="margin-bottom: 2.1333rem;">
+                            <div style="margin-bottom: 0.5333rem; font-weight: bold; font-size: 0.8666rem; line-height: 1.5333rem; color: var(--dark-grey);">H2; Spartan Bold; 56px; 56px Line; -2 Character</div>
+                            <h2>
+                                Spartan Bold
+                            </h2>
+                        </div>
+                        <div style="margin-bottom: 2.1333rem;">
+                            <div style="margin-bottom: 0.5333rem; font-weight: bold; font-size: 0.8666rem; line-height: 1.5333rem; color: var(--dark-grey);">H3; Spartan Bold; 18px; 25px Line; 0 Character</div>
+                            <h3>
+                                Spartan Bold
+                            </h3>
+                        </div>
+                    </div>
+                    <div style="flex: 1">
+                        <div style="text-transform: uppercase; margin-bottom: 2.1333rem; color: var(--light-grey); font-weight: bold; font-size: 1.0666rem; line-height: 1.8666rem; letter-spacing: 0.3333rem;">BODY</div>
+                        <div>
+                            <div style="margin-bottom: 1.0666rem; font-weight: bold; font-size: 0.8666rem; line-height: 1.5333rem; color: var(--dark-grey);">Body; Spartan Medium; 15px; 25px Line; 0 Character</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nun. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-03" style="margin-bottom: 7.4666rem;">
+            <div class="section-title" style="position: relative; height: 8rem; font-weight: bold; margin-bottom: 2.1333rem;">
+                <div style="margin-left: -6.6666rem; line-height: 8rem; font-size: 8rem; color: var(--very-light-grey); letter-spacing: -0.285714rem; position: absolute; top: 0; left: 0; z-index: -1;">03</div>
+                <div style="color: var(--very-dark-blue); font-size: 2.6666rem; line-height: 3.7333rem; margin-top: 1.8rem; display: inline-block;">Buttons</div>
+            </div>
+            <div class="section-content vertical-flex" style="--gap: 3.2rem;">
+                <div class="group-1 flex">
+                    <div style="flex: 1;">
+                        <button class="default" style="margin-bottom: 1.0666rem;">
+                            <span style="margin-right: 1.6rem; font-weight: bold;">Button 1</span>
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Normal</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <button class="default" style="background-color: var(--dark-grey); margin-bottom: 1.0666rem;">
+                            <span style="margin-right: 1.6rem; font-weight: bold;">Button 1</span>
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Hover</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <button class="default active" style="margin-bottom: 1.0666rem;">
+                            <span style="margin-right: 1.6rem; font-weight: bold;">Button 1</span>
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Active</div>
+                    </div>
+                </div>
+                <div class="group-2 flex">
+                    <div style="flex: 1;">
+                        <button class="default icon" style="margin-bottom: 1.0666rem;">
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Normal</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <button class="default icon" style="background-color: var(--dark-grey); margin-bottom: 1.0666rem;">
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Hover</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <button class="default icon active" style="margin-bottom: 1.0666rem;">
+                            <svg style="stroke: var(--white); width: 1.6rem; height: 1.2rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fill-rule="evenodd" stroke-width="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                        </button>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Active</div>
+                    </div>
+                </div>
+                <div class="group-3 flex">
+                    <div style="flex: 1;">
+                        <div class="number-button-container" style="margin-bottom: 1.0666rem;">
+                            <button class="default number active">01</button>
+                            <button class="default number">02</button>
+                        </div>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Normal</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="number-button-container" style="margin-bottom: 1.0666rem;">
+                            <button class="default number active">01</button>
+                            <button class="default number" style="background-color: var(--very-light-grey);">02</button>
+                        </div>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Hover</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="number-button-container" style="margin-bottom: 1.0666rem;">
+                            <button class="default number">01</button>
+                            <button class="default number active">02</button>
+                        </div>
+                        <div style="font-size: 0.8666rem; line-height: 1.5333rem; font-weight: bold; color: var(--very-dark-blue);">Active</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-04" style="margin-bottom: 8.1333rem;">
+            <div class="section-title" style="position: relative; height: 8rem; font-weight: bold; margin-bottom: 2.1333rem;">
+                <div style="margin-left: -6.6666rem; line-height: 8rem; font-size: 8rem; color: var(--very-light-grey); letter-spacing: -0.285714rem; position: absolute; top: 0; left: 0; z-index: -1;">04</div>
+                <div style="color: var(--very-dark-blue); font-size: 2.6666rem; line-height: 3.7333rem; margin-top: 1.8rem; display: inline-block;">Form Elements</div>
+            </div>
+            <div class="section-content vertical-flex" style="--gap: 5.3333rem;">
+                <div class="group-1 vertical-flex" style="--gap: 2.1333rem;">
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Normal</span>
+                        <div style="flex: 1;">
+                            <input type="text" class="default" placeholder="Textbox 1" />
+                        </div>
+                    </div>
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Active</span>
+                        <div style="flex: 1;">
+                            <input type="text" class="default active" placeholder="Textbox 1" />
+                        </div>
+                    </div>
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Error</span>
+                        <div style="flex: 1;">
+                            <div class="error-container">
+                                <input type="text" class="default error" placeholder="Textbox 1" />
+                                <span class="error">Can't be empty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-2 vertical-flex" style="--gap: 2.1333rem;">
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Normal</span>
+                        <div style="flex: 1;">
+                            <textarea type="text" class="default" placeholder="Textbox 1"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Active</span>
+                        <div style="flex: 1;">
+                            <textarea type="text" class="default active" placeholder="Textbox 1"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex" style="--gap: 10rem;">
+                        <span style="font-size: 0.8666rem; line-height: 3.3333rem; font-weight: bold; color: var(--very-dark-blue); flex: 0 0 11.6666rem;">Error</span>
+                        <div style="flex: 1;">
+                            <div class="error-container">
+                                <textarea type="text" class="default error" placeholder="Textbox 1"></textarea>
+                                <span class="error">Can't be empty</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
