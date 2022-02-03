@@ -1,0 +1,426 @@
+.project-paramour {
+    background-image: url('/assets/home/desktop/image-hero-paramour.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    padding: 12rem 0 12rem 12.6666rem;
+    justify-content: center;
+    margin-bottom: 13rem;
+    position: relative;
+}
+
+    .project-paramour > .mask {
+        background-color: var(--black);
+        opacity: 0.35;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .project-paramour > .inner {
+        position: relative;
+    }
+
+        .project-paramour > .inner > .data {
+            display: none;
+        }
+
+            .project-paramour > .inner > .data.active {
+                display: block;
+            }
+
+            .project-paramour > .inner > .data > h1.S {
+                width: 36.2666rem;
+                color: inherit;
+                margin-bottom: 0.9333rem;
+            }
+
+            .project-paramour > .inner > .data > div {
+                width: 29.6666rem;
+                height: 6.6666rem;
+                margin-bottom: 1rem;
+            }
+
+        .project-paramour > .inner > a {
+            width: 16.8rem;
+            height: 4.8rem;
+        }
+
+    .project-paramour > .number-button-container {
+        position: absolute;
+        bottom: 0;
+        left: -5.3333rem;
+    }
+
+.welcome-to-arch-studio {
+    margin-bottom: 13.3333rem;
+    position: relative;
+}
+
+    .welcome-to-arch-studio > h1.L {
+        position: absolute;
+        top: -6.6666rem;
+        left: 0;
+    }
+
+    .welcome-to-arch-studio > .inner > .left {
+        flex: 1;
+        padding: 5rem 0 0 12.6rem;
+    }
+
+        .welcome-to-arch-studio > .inner > .left > .inner {
+            width: 29.7333rem;
+        }
+
+            .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                margin-bottom: 3.7333rem;
+            }
+
+            .welcome-to-arch-studio > .inner > .left > .inner > div {
+                width: 29.7333rem;
+            }
+
+    .welcome-to-arch-studio > .inner > .right {
+        flex: 0 0 23.3333rem;
+        background-image: url('/assets/home/desktop/image-welcome.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+.small-team-big-ideas {
+    background-image: url('/assets/home/desktop/image-small-team.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 11.2rem 0 11.2rem 12.6666rem;
+    margin-bottom: 13.3333rem;
+    position: relative;
+}
+
+    .small-team-big-ideas > .mask {
+        background-color: var(--black);
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .small-team-big-ideas > .inner {
+        width: 29.6666rem;
+        position: relative;
+    }
+
+        .small-team-big-ideas > .inner > h2 {
+            margin-bottom: 1.7333rem;
+            color: var(--white);
+        }
+
+        .small-team-big-ideas > .inner > a {
+            width: 12.4666rem;
+            height: 4.8rem;
+        }
+
+.featured {
+    margin-bottom: 4.2666rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .featured > a {
+        width: 11.2666rem;
+        height: 4.8rem;
+    }
+
+.featured-projects {
+    height: 37.3333rem;
+    margin-bottom: 13.333rem;
+    --gap: 2rem;
+}
+
+    .featured-projects > .project {
+        flex: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        color: var(--white);
+    }
+
+    .featured-projects > div:nth-of-type(1) {
+        background-image: url('/assets/portfolio/desktop/image-del-sol.jpg');
+    }
+
+    .featured-projects > div:nth-of-type(2) {
+        background-image: url('/assets/portfolio/desktop/image-228b.jpg');
+    }
+
+    .featured-projects > div:nth-of-type(3) {
+        background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
+    }
+
+    .featured-projects > .project > h1.L {
+        position: absolute;
+        top: 2.1333rem;
+        right: -0.75rem;
+        opacity: 0.5;
+        color: var(--white);
+    }
+
+    .featured-projects > .project > .mask {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .featured-projects > .project > .inner {
+        position: absolute;
+        bottom: 2.6666rem;
+        left: 2.6666rem;
+    }
+
+        .featured-projects > .project > .inner > div:first-of-type {
+            font-weight: bold;
+            margin-bottom: 0.2666rem;
+        }
+
+        .featured-projects > .project > .inner > div:last-of-type {
+            opacity: 0.75;
+        }
+
+    .featured-projects > a {
+        height: 4.8rem;
+        display: none;
+    }
+
+/* ------------------- */
+/* Tablet view         */
+/* ------------------- */
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+    .project-paramour {
+        background-image: url('/assets/home/tablet/image-hero-paramour.jpg');
+        padding: 12rem 0 12rem 3.8666rem;
+        margin-bottom: 16.6rem;
+    }
+
+        .project-paramour > .inner {
+            width: 30.4666rem;
+        }
+
+            .project-paramour > .inner > .data > h1.S {
+                width: 100%;
+                color: inherit;
+            }
+
+            .project-paramour > .inner > .data > div {
+                width: 100%;
+            }
+
+        .project-paramour > .number-button-container {
+            display: none;
+        }
+
+    .welcome-to-arch-studio > h1.L {
+        top: -11.6666rem;
+    }
+
+    .welcome-to-arch-studio > .inner > .left {
+        padding: 0;
+    }
+
+        .welcome-to-arch-studio > .inner > .left > .inner {
+            width: auto;
+        }
+
+            .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                width: 29.7333rem;
+            }
+
+            .welcome-to-arch-studio > .inner > .left > .inner > div {
+                width: auto;
+                font-weight: 500;
+            }
+
+    .welcome-to-arch-studio > .inner > .right {
+        display: none;
+    }
+
+    .small-team-big-ideas {
+        background-image: url('/assets/home/tablet/image-small-team.jpg');
+        padding: 11.2rem 0 11.2rem 3.8666rem;
+    }
+
+        .small-team-big-ideas > .inner > h2 {
+            height: 10.1333rem;
+        }
+
+    .featured {
+        margin-bottom: 5.6666rem;
+    }
+
+    .featured-projects {
+        height: auto;
+        --gap: 1.6rem;
+        flex-direction: column;
+    }
+
+        .featured-projects > div:nth-of-type(1) {
+            background-image: url('/assets/portfolio/tablet/image-del-sol.jpg');
+        }
+
+        .featured-projects > div:nth-of-type(2) {
+            background-image: url('/assets/portfolio/tablet/image-228b.jpg');
+        }
+
+        .featured-projects > div:nth-of-type(3) {
+            background-image: url('/assets/portfolio/tablet/image-prototype.jpg');
+        }
+
+        .featured-projects > .project > h1.L {
+            top: 1.0666rem;
+            right: 1.0666rem;
+            font-size: 13.3333rem;
+            letter-spacing: 0.3333rem;
+        }
+
+        .featured-projects > .project > .mask {
+            top: 0;
+            height: 100%;
+        }
+
+        .featured-projects > .project {
+            flex: 0 0 16rem;
+        }
+}
+
+/* ------------------- */
+/* Mobile view         */
+/* ------------------- */
+@media only screen and (max-width : 767px) {
+    .project-paramour {
+        background-image: url('/assets/home/mobile/image-hero-paramour.jpg');
+        padding: 7.333rem 0 7.333rem 2.1333rem;
+        margin: 0 -2.1333rem 4.8rem -2.1333rem;
+    }
+
+        .project-paramour > .inner {
+            width: 20.7333rem;
+        }
+
+            .project-paramour > .inner > .data > h1.S {
+                width: 100%;
+                color: inherit;
+                margin-bottom: 1rem;
+            }
+
+            .project-paramour > .inner > .data > div {
+                width: 100%;
+                margin-bottom: 3.8rem;
+            }
+
+        .project-paramour > .number-button-container {
+            display: none;
+        }
+
+    .welcome-to-arch-studio {
+        margin-bottom: 6.4666rem;
+    }
+
+        .welcome-to-arch-studio::before {
+            display: block;
+            content: '';
+            width: 4.3333rem;
+            height: 0;
+            top: 0;
+            left: 0;
+            border-bottom: 0.0666rem solid var(--light-grey);
+        }
+
+        .welcome-to-arch-studio > h1.L {
+            display: none;
+        }
+
+        .welcome-to-arch-studio > .inner > .left {
+            padding: 4.5333rem 0 0 0;
+        }
+
+            .welcome-to-arch-studio > .inner > .left > .inner {
+                width: auto;
+            }
+
+                .welcome-to-arch-studio > .inner > .left > .inner > h2 {
+                    width: auto;
+                }
+
+                .welcome-to-arch-studio > .inner > .left > .inner > div {
+                    width: auto;
+                    font-weight: 500;
+                }
+
+        .welcome-to-arch-studio > .inner > .right {
+            display: none;
+        }
+
+    .small-team-big-ideas {
+        background-image: url('/assets/home/mobile/image-small-team.jpg');
+        padding: 12rem 0 12rem 2.1333rem;
+        margin: 0 -2.1333rem 4.8rem -2.1333rem;
+    }
+
+        .small-team-big-ideas > .inner {
+            width: 20.7333rem;
+        }
+
+            .small-team-big-ideas > .inner > h2 {
+                margin-bottom: 2.1333rem;
+            }
+
+    .featured {
+        margin-bottom: 3.2rem;
+    }
+
+        .featured > a {
+            display: none;
+        }
+
+    .featured-projects {
+        height: auto;
+        --gap: 1.6rem;
+        flex-direction: column;
+        margin-bottom: 8.8rem;
+    }
+
+        .featured-projects > div:nth-of-type(1) {
+            background-image: url('/assets/portfolio/mobile/image-del-sol.jpg');
+        }
+
+        .featured-projects > div:nth-of-type(2) {
+            background-image: url('/assets/portfolio/mobile/image-228b.jpg');
+        }
+
+        .featured-projects > div:nth-of-type(3) {
+            background-image: url('/assets/portfolio/mobile/image-prototype.jpg');
+        }
+
+        .featured-projects > .project > h1.L {
+            display: none;
+        }
+
+        .featured-projects > .project > .mask {
+            top: 0;
+            height: 100%;
+        }
+
+        .featured-projects > .project {
+            flex: 0 0 16rem;
+        }
+
+        .featured-projects > a {
+            display: flex;
+            width: 100%;
+        }
+}
