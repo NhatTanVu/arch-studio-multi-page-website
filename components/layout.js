@@ -20,7 +20,7 @@ export default function Layout({ children, bookmarkText }) {
                 </noscript>
                 <meta
                     property="og:image"
-                    content={"https://nhattanvu.github.io/arch-studio-multi-page-website/assets/logo.svg"}
+                    content={"https://raw.githubusercontent.com/NhatTanVu/arch-studio-multi-page-website/main/preview.jpg"}
                 />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
