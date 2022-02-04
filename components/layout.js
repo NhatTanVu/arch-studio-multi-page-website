@@ -29,7 +29,7 @@ export default function Layout({ children, bookmarkText }) {
                     <span className="line"></span>
                     <span className="text">{bookmarkText}</span>
                 </div>
-                <img className="logo" src="/assets/logo.svg" />
+                <img className="logo" src="/assets/logo.svg" alt="logo" />
                 <nav className={isMenuOpened ? "opened" : ""}>
                     <ul className="navigation-bar">
                         <li className={bookmarkText == 'PORTFOLIO' ? 'active' : ''}><a href="/portfolio">Portfolio</a></li>

@@ -277,7 +277,7 @@ input[type=text].default {
         textarea.default.error + span.error {
             position: absolute;
             right: 0;
-            bottom: 1.0666rem;
+            bottom: 0;
         }
 
 .error-container {

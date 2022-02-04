@@ -117,7 +117,7 @@ export default function Contact() {
                     <div className={(email == "" || !validateEmail(email)) ? "error-container" : ""}>
                         <input type="text" className={`default ${(email == "" || !validateEmail(email)) ? "error" : ""}`} placeholder="Email" value={email} onChange={onEmailChange} />
                         {email == "" && <span className="error">Can't be empty</span>}
-                        {email != "" && !validateEmail(email) && <span className="error">Invalid email</span>}
+                        {email != "" && !validateEmail(email) && <span className="error">Please use a valid email address</span>}
                     </div>
                     <div className={message == "" ? "error-container" : ""}>
                         <textarea type="text" className={`default ${message == "" ? "error" : ""}`} placeholder="Message" value={message} onChange={onMessageChange} rows="3"></textarea>
