@@ -124,8 +124,8 @@ button {
 
     a:hover,
     a:focus,
-    button:hover,
-    button:focus {
+    button:not(:disabled):hover,
+    button:not(:disabled):focus {
         cursor: pointer;
     }
 
@@ -138,10 +138,14 @@ button {
         background-color: var(--very-dark-blue);
     }
 
+        button.default:disabled {
+            background-color: var(--dark-grey);
+        }
+
         a.default:hover,
         a.default:focus,
-        button.default:hover,
-        button.default:focus {
+        button.default:not(:disabled):hover,
+        button.default:not(:disabled):focus {
             background-color: var(--dark-grey);
         }
 
@@ -264,8 +268,6 @@ input[type=text].default {
             opacity: 1;
         }
 
-        input.default.error:not(:placeholder-shown) + span.error,
-        textarea.default.error:not(:placeholder-shown) + span.error,
         input.default.error:focus + span.error,
         textarea.default.error:focus + span.error {
             opacity: 0;

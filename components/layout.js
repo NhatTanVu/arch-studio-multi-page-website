@@ -1,8 +1,11 @@
-﻿import Head from 'next/head'
+﻿import React, { useState } from 'react';
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Layout({ children, bookmarkText }) {
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
+
     return (
         <>
             <Head>
@@ -27,15 +30,18 @@ export default function Layout({ children, bookmarkText }) {
                     <span className="text">{bookmarkText}</span>
                 </div>
                 <img className="logo" src="/assets/logo.svg" />
-                <nav>
+                <nav className={isMenuOpened ? "opened" : ""}>
                     <ul className="navigation-bar">
                         <li className={bookmarkText == 'PORTFOLIO' ? 'active' : ''}><a href="/portfolio">Portfolio</a></li>
                         <li className={bookmarkText == 'ABOUT US' ? 'active' : ''}><a href="/about">About Us</a></li>
                         <li className={bookmarkText == 'CONTACT' ? 'active' : ''}><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
-                <div id="header-mask"></div>
-                <img id="burger" className="burger" src="/assets/icons/icon-hamburger.svg" alt="burger menu" />
+                <div id="header-mask" className={isMenuOpened ? "opened" : ""}></div>
+                <img id="burger" className={`burger ${isMenuOpened ? "opened" : ""}`}
+                    alt="burger menu"
+                    src={isMenuOpened ? "./assets/icons/icon-close.svg" : "/assets/icons/icon-hamburger.svg"}
+                    onClick={() => setIsMenuOpened(!isMenuOpened)} />
             </header>
             <main>{children}</main>
             <footer className="flex">

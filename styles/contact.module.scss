@@ -153,6 +153,19 @@
     height: 1.2rem;
 }
 
+.connect-with-us > form > .summary {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 1.4666rem;
+    font-family: inherit;
+    font-weight: bold;
+    width: calc(100% - 5.3333rem);
+    height: 5.3333rem;
+    display: flex;
+    align-items: center;
+}
+
 /* ------------------- */
 /* Tablet view         */
 /* ------------------- */
