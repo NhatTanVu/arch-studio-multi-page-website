@@ -162,6 +162,17 @@
         background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
     }
 
+    .featured-projects > .project:hover::after,
+    .featured-projects > .project:focus::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.503415);
+        content: '';
+    }
+
     .featured-projects > .project > h1.L {
         position: absolute;
         top: 2.1333rem;
