@@ -146,17 +146,19 @@
         background-size: cover;
         position: relative;
         color: var(--white);
+        text-align: left;
+        width: auto;
     }
 
-    .featured-projects > div:nth-of-type(1) {
+    .featured-projects > a:nth-of-type(1) {
         background-image: url('/assets/portfolio/desktop/image-del-sol.jpg');
     }
 
-    .featured-projects > div:nth-of-type(2) {
+    .featured-projects > a:nth-of-type(2) {
         background-image: url('/assets/portfolio/desktop/image-228b.jpg');
     }
 
-    .featured-projects > div:nth-of-type(3) {
+    .featured-projects > a:nth-of-type(3) {
         background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
     }
 
@@ -192,7 +194,7 @@
             opacity: 0.75;
         }
 
-    .featured-projects > a {
+    .featured-projects > a:last-of-type {
         height: 4.8rem;
         display: none;
     }
@@ -268,15 +270,15 @@
         flex-direction: column;
     }
 
-        .featured-projects > div:nth-of-type(1) {
+        .featured-projects > a:nth-of-type(1) {
             background-image: url('/assets/portfolio/tablet/image-del-sol.jpg');
         }
 
-        .featured-projects > div:nth-of-type(2) {
+        .featured-projects > a:nth-of-type(2) {
             background-image: url('/assets/portfolio/tablet/image-228b.jpg');
         }
 
-        .featured-projects > div:nth-of-type(3) {
+        .featured-projects > a:nth-of-type(3) {
             background-image: url('/assets/portfolio/tablet/image-prototype.jpg');
         }
 
@@ -394,15 +396,15 @@
         margin-bottom: 8.8rem;
     }
 
-        .featured-projects > div:nth-of-type(1) {
+        .featured-projects > a:nth-of-type(1) {
             background-image: url('/assets/portfolio/mobile/image-del-sol.jpg');
         }
 
-        .featured-projects > div:nth-of-type(2) {
+        .featured-projects > a:nth-of-type(2) {
             background-image: url('/assets/portfolio/mobile/image-228b.jpg');
         }
 
-        .featured-projects > div:nth-of-type(3) {
+        .featured-projects > a:nth-of-type(3) {
             background-image: url('/assets/portfolio/mobile/image-prototype.jpg');
         }
 
@@ -419,7 +421,7 @@
             flex: 0 0 16rem;
         }
 
-        .featured-projects > a {
+        .featured-projects > a:last-of-type {
             display: flex;
             width: 100%;
         }

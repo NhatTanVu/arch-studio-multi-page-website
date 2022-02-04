@@ -112,30 +112,30 @@ export default function Home() {
                 </a>
             </div>
             <div className={`${localStyles['featured-projects']} flex`}>
-                <div className={localStyles.project}>
+                <a className={localStyles.project} href="/portfolio">
                     <h1 className={`${localStyles.L} L`}>1</h1>
                     <div className={localStyles.mask}></div>
                     <div className={localStyles.inner}>
                         <div>Project Del Sol</div>
                         <div>View All Projects</div>
                     </div>
-                </div>
-                <div className={localStyles.project}>
+                </a>
+                <a className={localStyles.project} href="/portfolio">
                     <h1 className={`${localStyles.L} L`}>2</h1>
                     <div className={localStyles.mask}></div>
                     <div className={localStyles.inner}>
                         <div>228B Tower</div>
                         <div>View All Projects</div>
                     </div>
-                </div>
-                <div className={localStyles.project}>
+                </a>
+                <a className={localStyles.project} href="/portfolio">
                     <h1 className={`${localStyles.L} L`}>3</h1>
                     <div className={localStyles.mask}></div>
                     <div className={localStyles.inner}>
                         <div>Le Prototype</div>
                         <div>View All Projects</div>
                     </div>
-                </div>
+                </a>
                 <a className="default" href="/portfolio">
                     <span>See All</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>

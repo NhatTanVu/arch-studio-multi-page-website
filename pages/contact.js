@@ -85,7 +85,7 @@ export default function Contact() {
                             <span>Address :  1892 Chenoweth Drive TN</span><br />
                             <span>Phone :  123-456-3451</span>
                         </div>
-                        <a href="#">
+                        <a href="#map">
                             <span>View on Map</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
                         </a>
@@ -99,14 +99,14 @@ export default function Contact() {
                             <span>Address :  3399 Wines Lane TX</span><br />
                             <span>Phone :  832-123-4321</span>
                         </div>
-                        <a href="#">
+                        <a href="#map">
                             <span>View on Map</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
                         </a>
                     </div>
                 </div>
             </div>
-            <div className={localStyles["map"]}></div>
+            <div id="map" className={localStyles["map"]}></div>
             <div className={`${localStyles["connect-with-us"]} flex`}>
                 <h2 className={localStyles["title"]}>Connect with us</h2>
                 <form className="vertical-flex" onSubmit={onSubmit}>

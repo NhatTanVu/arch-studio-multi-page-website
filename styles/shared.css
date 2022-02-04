@@ -318,7 +318,7 @@ ul.navigation-bar {
             color: var(--very-dark-blue);
         }
 
-        ul.navigation-bar > li.active::after {
+        ul.navigation-bar > li::after {
             content: '';
             border-bottom: 0.0666rem solid var(--very-dark-blue);
             width: 1.6rem;
@@ -326,6 +326,13 @@ ul.navigation-bar {
             left: 0;
             right: 0;
             margin: 0.4666rem auto 0 auto;
+            transform: scaleX(0);
+            transition: transform 0.3s ease 0s;
+        }
+
+        ul.navigation-bar > li:hover::after,
+        ul.navigation-bar > li.active::after {
+            transform: scaleX(1);
         }
 
 header {
