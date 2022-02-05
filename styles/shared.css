@@ -529,7 +529,6 @@ footer {
                     }
 
                     header > nav.opened > ul.navigation-bar > li > a {
-                        color: var(--very-dark-blue);
                         width: 100%;
                         display: inline-block;
                     }
