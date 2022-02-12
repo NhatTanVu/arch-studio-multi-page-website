@@ -93,7 +93,7 @@ export default function Contact() {
                     name="description"
                     content={pageTitle}
                 />
-                <meta name="og:title" content={pageTitle} />
+                <meta name="title" property="og:title" content={pageTitle} />
             </Head>
             <div className={localStyles["tell-us"]}>
                 <h1 className={`${localStyles.L} L`}>Contact</h1>

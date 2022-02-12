@@ -57,7 +57,7 @@ export default function Portolio() {
                     name="description"
                     content={pageTitle}
                 />
-                <meta name="og:title" content={pageTitle} />
+                <meta name="title" property="og:title" content={pageTitle} />
             </Head>
             <div className={localStyles.projects}>
                 <div>

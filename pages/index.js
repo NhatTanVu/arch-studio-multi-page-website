@@ -65,7 +65,7 @@ export default function Home() {
                     name="description"
                     content={pageTitle}
                 />
-                <meta name="og:title" content={pageTitle} />
+                <meta name="title" property="og:title" content={pageTitle} />
             </Head>
             <div className={localStyles['project-paramour']} style={{ backgroundImage: `url(/assets/home/${isDesktop ? "desktop" : (isTablet ? "tablet" : "mobile")}/${backgroundImages[slideNumber]})` }}>
                 <div className={localStyles.mask}></div>

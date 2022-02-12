@@ -46,7 +46,7 @@ export default function About() {
                     name="description"
                     content={pageTitle}
                 />
-                <meta name="og:title" content={pageTitle} />
+                <meta name="title" property="og:title" content={pageTitle} />
             </Head>
             <div className={localStyles["your-team"]}>
                 <h1 className={`${localStyles.L} L`}>About</h1>
