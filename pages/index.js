@@ -1,9 +1,10 @@
+//import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../components/layout'
-import localStyles from '../styles/index.module.css'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import localStyles from '../styles/index.module.css';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 const pageTitle = "Arch Studio Website Challenge | Home";
 
@@ -22,6 +23,39 @@ export default function Home() {
         }, 5000);
         return () => clearInterval(interval);
     }, []);
+
+    const [welcomeToArchRef, isWelcomeToArchOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isWelcomeToArchShown, setIsWelcomeToArchShown] = useState(false);
+    useEffect(() => {
+        if (isWelcomeToArchOnScreen)
+            setIsWelcomeToArchShown(true);
+    }, [isWelcomeToArchOnScreen]);
+
+    const [smallTeamBigIdeasRef, isSmallTeamBigIdeasOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isSmallTeamBigIdeasShown, setSmallTeamBigIdeasShown] = useState(false);
+    useEffect(() => {
+        if (isSmallTeamBigIdeasOnScreen)
+            setSmallTeamBigIdeasShown(true);
+    }, [isSmallTeamBigIdeasOnScreen]);
+
+    const [featuredRef, isFeaturedOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isFeaturedShown, setIsFeaturedShown] = useState(false);
+    useEffect(() => {
+        if (isFeaturedOnScreen)
+            setIsFeaturedShown(true);
+    }, [isFeaturedOnScreen]);
 
     return (
         <Layout bookmarkText="HOME">
@@ -76,7 +110,7 @@ export default function Home() {
                         onClick={() => { setSlideNumber(3) }}>04</button>
                 </div>
             </div>
-            <div className={localStyles["welcome-to-arch-studio"]}>
+            <div ref={welcomeToArchRef} className={`${localStyles["welcome-to-arch-studio"]} ${isWelcomeToArchShown ? "isShown" : "isHidden"}`}>
                 <h1 className={`${localStyles.L} L`}>Welcome</h1>
                 <div className={`flex ${localStyles.inner}`}>
                     <div className={localStyles.left}>
@@ -94,7 +128,7 @@ export default function Home() {
                     <div className={localStyles.right}></div>
                 </div>
             </div>
-            <div className={localStyles["small-team-big-ideas"]}>
+            <div ref={smallTeamBigIdeasRef} className={`${localStyles["small-team-big-ideas"]} ${isSmallTeamBigIdeasShown ? "isShown" : "isHidden"}`}>
                 <div className={localStyles.mask}></div>
                 <div className={localStyles.inner}>
                     <h2>Small team, big ideas</h2>
@@ -104,42 +138,44 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-            <div className={`${localStyles.featured} flex`}>
-                <h2>Featured</h2>
-                <a className="default" href="/portfolio">
-                    <span>See All</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
-                </a>
-            </div>
-            <div className={`${localStyles['featured-projects']} flex`}>
-                <a className={localStyles.project} href="/portfolio">
-                    <h1 className={`${localStyles.L} L`}>1</h1>
-                    <div className={localStyles.mask}></div>
-                    <div className={localStyles.inner}>
-                        <div>Project Del Sol</div>
-                        <div>View All Projects</div>
-                    </div>
-                </a>
-                <a className={localStyles.project} href="/portfolio">
-                    <h1 className={`${localStyles.L} L`}>2</h1>
-                    <div className={localStyles.mask}></div>
-                    <div className={localStyles.inner}>
-                        <div>228B Tower</div>
-                        <div>View All Projects</div>
-                    </div>
-                </a>
-                <a className={localStyles.project} href="/portfolio">
-                    <h1 className={`${localStyles.L} L`}>3</h1>
-                    <div className={localStyles.mask}></div>
-                    <div className={localStyles.inner}>
-                        <div>Le Prototype</div>
-                        <div>View All Projects</div>
-                    </div>
-                </a>
-                <a className="default" href="/portfolio">
-                    <span>See All</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
-                </a>
+            <div ref={featuredRef} className={`${isFeaturedShown ? "isShown" : "isHidden"}`}>
+                <div className={`${localStyles.featured} flex`}>
+                    <h2>Featured</h2>
+                    <a className="default" href="/portfolio">
+                        <span>See All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                    </a>
+                </div>
+                <div className={`${localStyles['featured-projects']} flex`}>
+                    <a className={localStyles.project} href="/portfolio">
+						<h1 className={`${localStyles.L} L`}>1</h1>
+						<div className={localStyles.mask}></div>
+						<div className={localStyles.inner}>
+							<div>Project Del Sol</div>
+							<div>View All Projects</div>
+						</div>
+					</a>
+					<a className={localStyles.project} href="/portfolio">
+						<h1 className={`${localStyles.L} L`}>2</h1>
+						<div className={localStyles.mask}></div>
+						<div className={localStyles.inner}>
+							<div>228B Tower</div>
+							<div>View All Projects</div>
+						</div>
+					</a>
+					<a className={localStyles.project} href="/portfolio">
+						<h1 className={`${localStyles.L} L`}>3</h1>
+						<div className={localStyles.mask}></div>
+						<div className={localStyles.inner}>
+							<div>Le Prototype</div>
+							<div>View All Projects</div>
+						</div>
+					</a>
+                    <a className="default" href="/portfolio">
+                        <span>See All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20"><g fill="none" fillRule="evenodd" strokeWidth="2"><path d="M15 1l9 9-9 9M0 10h24" /></g></svg>
+                    </a>
+                </div>
             </div>
         </Layout>
     )

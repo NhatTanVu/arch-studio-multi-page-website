@@ -284,6 +284,18 @@ input[type=text].default {
     position: relative;
 }
 
+.isShown {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 500ms ease-in-out;
+}
+
+.isHidden {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: 500ms ease-in-out;
+}
+
 ul.navigation-bar {
     font-weight: bold;
     list-style-type: none;

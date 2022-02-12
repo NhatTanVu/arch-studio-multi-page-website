@@ -1,8 +1,9 @@
+//import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../components/layout'
-import localStyles from '../styles/contact.module.scss'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import localStyles from '../styles/contact.module.scss';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 const pageTitle = "Arch Studio Website Challenge | Contact";
 
@@ -14,6 +15,39 @@ export default function Contact() {
             document.documentElement.classList.remove(localStyles.root);
         };
     }, []);
+
+    const [contactDetailsRef, isContactDetailsOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isContactDetailsShown, setContactDetailsShown] = useState(false);
+    useEffect(() => {
+        if (isContactDetailsOnScreen)
+            setContactDetailsShown(true);
+    }, [isContactDetailsOnScreen]);
+
+    const [mapRef, isMapOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isMapShown, setMapShown] = useState(false);
+    useEffect(() => {
+        if (isMapOnScreen)
+            setMapShown(true);
+    }, [isMapOnScreen]);
+
+    const [connectWithUsRef, isConnectWithUsOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isConnectWithUsShown, setConnectWithUsShown] = useState(false);
+    useEffect(() => {
+        if (isConnectWithUsOnScreen)
+            setConnectWithUsShown(true);
+    }, [isConnectWithUsOnScreen]);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -74,7 +108,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <div className={`${localStyles["contact-details"]} grid`}>
+            <div ref={contactDetailsRef} className={`${localStyles["contact-details"]} grid ${isContactDetailsShown ? "isShown" : "isHidden"}`}>
                 <div className={localStyles["separator"]}></div>
                 <h2 className={localStyles["title"]}>Contact Details</h2>
                 <div className={localStyles["office"]}>
@@ -106,8 +140,8 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <div id="map" className={localStyles["map"]}></div>
-            <div className={`${localStyles["connect-with-us"]} flex`}>
+            <div id="map" ref={mapRef} className={`${localStyles["map"]} ${isMapShown ? "isShown" : "isHidden"}`}></div>
+            <div ref={connectWithUsRef} className={`${localStyles["connect-with-us"]} flex ${isConnectWithUsShown ? "isShown" : "isHidden"}`}>
                 <h2 className={localStyles["title"]}>Connect with us</h2>
                 <form className="vertical-flex" onSubmit={onSubmit}>
                     <div className={name == "" ? "error-container" : ""}>

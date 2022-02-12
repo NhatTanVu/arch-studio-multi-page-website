@@ -15,17 +15,21 @@
     }
 }
 
-.projects {
+.projects > div {
     display: grid;
     row-gap: 2.1333rem;
     column-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 37.3333rem;
-    margin-bottom: 10.6666rem;
+    margin-bottom: 2.1333rem;
     color: var(--white);
 }
 
-.projects > .project {
+.projects > div:last-of-type {
+    margin-bottom: 10.6666rem;
+}
+
+.projects > div > .project {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -35,7 +39,7 @@
     position: relative;
 }
 
-.projects > .project:hover::after, .projects > .project:focus::after {
+.projects > div > .project:hover::after, .projects > .project:focus::after {
     position: absolute;
     left: 0;
     top: 0;
@@ -45,7 +49,7 @@
     content: '';
 }
 
-.projects > .project > .mask {
+.projects > div > .project > .mask {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.01%, rgba(0, 0, 0, 0.499044) 100%);
     position: absolute;
     left: 0;
@@ -54,131 +58,135 @@
     height: 50%;
 }
 
-.projects > :nth-of-type(1) {
+.projects > div:nth-of-type(1) > :nth-of-type(1) {
     background-image: url('/assets/portfolio/desktop/image-seraph.jpg');
 }
 
-.projects > :nth-of-type(2) {
+.projects > div:nth-of-type(1) > :nth-of-type(2) {
     background-image: url('/assets/portfolio/desktop/image-eebox.jpg');
 }
 
-.projects > :nth-of-type(3) {
+.projects > div:nth-of-type(1) > :nth-of-type(3) {
     background-image: url('/assets/portfolio/desktop/image-federal.jpg');
 }
 
-.projects > :nth-of-type(4) {
+.projects > div:nth-of-type(2) > :nth-of-type(1) {
     background-image: url('/assets/portfolio/desktop/image-del-sol.jpg');
 }
 
-.projects > :nth-of-type(5) {
+.projects > div:nth-of-type(2) > :nth-of-type(2) {
     background-image: url('/assets/portfolio/desktop/image-prototype.jpg');
 }
 
-.projects > :nth-of-type(6) {
+.projects > div:nth-of-type(2) > :nth-of-type(3) {
     background-image: url('/assets/portfolio/desktop/image-228b.jpg');
 }
 
-.projects > :nth-of-type(7) {
+.projects > div:nth-of-type(3) > :nth-of-type(1) {
     background-image: url('/assets/portfolio/desktop/image-edelweiss.jpg');
 }
 
-.projects > :nth-of-type(8) {
+.projects > div:nth-of-type(3) > :nth-of-type(2) {
     background-image: url('/assets/portfolio/desktop/image-netcry.jpg');
 }
 
-.projects > :nth-of-type(9) {
+.projects > div:nth-of-type(3) > :nth-of-type(3) {
     background-image: url('/assets/portfolio/desktop/image-hypers.jpg');
 }
 
-.projects > :nth-of-type(10) {
+.projects > div:nth-of-type(4) > :nth-of-type(1) {
     background-image: url('/assets/portfolio/desktop/image-sxiv.jpg');
 }
 
-.projects > :nth-of-type(11) {
+.projects > div:nth-of-type(4) > :nth-of-type(2) {
     background-image: url('/assets/portfolio/desktop/image-trinity.jpg');
 }
 
-.projects > :nth-of-type(12) {
+.projects > div:nth-of-type(4) > :nth-of-type(3) {
     background-image: url('/assets/portfolio/desktop/image-paramour.jpg');
 }
 
-.projects > .project > .inner {
+.projects > div > .project > .inner {
     position: absolute;
     bottom: 2.6666rem;
     left: 2.6666rem;
 }
 
-.projects > .project > .inner > .name {
+.projects > div > .project > .inner > .name {
     font-weight: bold;
     margin-bottom: 0.2666rem;
     font-size: 1.2rem;
 }
 
-.projects > .project > .inner > .date {
+.projects > div > .project > .inner > .date {
     opacity: 0.75;
 }
 /* ------------------- */
 /* Tablet view         */
 /* ------------------- */
 @media only screen and (min-width : 768px) and (max-width : 1023px) {
-    .projects {
+    .projects > div {
         row-gap: 1.6rem;
         column-gap: 0;
         grid-template-columns: 1fr;
         grid-auto-rows: 16rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .projects > div:last-of-type {
         margin-bottom: 13.3333rem;
     }
 
-    .projects > .project > .mask {
+    .projects > div > .project > .mask {
         top: 0;
         height: 100%;
     }
 
-    .projects > :nth-of-type(1) {
+    .projects > div:nth-of-type(1) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/tablet/image-seraph.jpg');
     }
 
-    .projects > :nth-of-type(2) {
+    .projects > div:nth-of-type(1) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/tablet/image-eebox.jpg');
     }
 
-    .projects > :nth-of-type(3) {
+    .projects > div:nth-of-type(1) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/tablet/image-federal.jpg');
     }
 
-    .projects > :nth-of-type(4) {
+    .projects > div:nth-of-type(2) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/tablet/image-del-sol.jpg');
     }
 
-    .projects > :nth-of-type(5) {
+    .projects > div:nth-of-type(2) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/tablet/image-prototype.jpg');
     }
 
-    .projects > :nth-of-type(6) {
+    .projects > div:nth-of-type(2) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/tablet/image-228b.jpg');
     }
 
-    .projects > :nth-of-type(7) {
+    .projects > div:nth-of-type(3) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/tablet/image-edelweiss.jpg');
     }
 
-    .projects > :nth-of-type(8) {
+    .projects > div:nth-of-type(3) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/tablet/image-netcry.jpg');
     }
 
-    .projects > :nth-of-type(9) {
+    .projects > div:nth-of-type(3) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/tablet/image-hypers.jpg');
     }
 
-    .projects > :nth-of-type(10) {
+    .projects > div:nth-of-type(4) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/tablet/image-sxiv.jpg');
     }
 
-    .projects > :nth-of-type(11) {
+    .projects > div:nth-of-type(4) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/tablet/image-trinity.jpg');
     }
 
-    .projects > :nth-of-type(12) {
+    .projects > div:nth-of-type(4) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/tablet/image-paramour.jpg');
     }
 }
@@ -186,69 +194,76 @@
 /* Mobile view         */
 /* ------------------- */
 @media only screen and (max-width : 767px) {
-    .projects {
+    .projects > div {
         row-gap: 1.6rem;
         column-gap: 0;
         grid-template-columns: 1fr;
         grid-auto-rows: 16rem;
-        margin-bottom: 8.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .projects > div:first-of-type {
         padding-top: 3.7333rem;
     }
 
-    .projects > .project > .mask {
+    .projects > div:last-of-type {
+        margin-bottom: 8.8rem;
+    }
+
+    .projects > div > .project > .mask {
         top: 0;
         height: 100%;
     }
 
-    .projects > :nth-of-type(1) {
+    .projects > div:nth-of-type(1) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/mobile/image-seraph.jpg');
     }
 
-    .projects > :nth-of-type(2) {
+    .projects > div:nth-of-type(1) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/mobile/image-eebox.jpg');
     }
 
-    .projects > :nth-of-type(3) {
+    .projects > div:nth-of-type(1) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/mobile/image-federal.jpg');
     }
 
-    .projects > :nth-of-type(4) {
+    .projects > div:nth-of-type(2) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/mobile/image-del-sol.jpg');
     }
 
-    .projects > :nth-of-type(5) {
+    .projects > div:nth-of-type(2) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/mobile/image-prototype.jpg');
     }
 
-    .projects > :nth-of-type(6) {
+    .projects > div:nth-of-type(2) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/mobile/image-228b.jpg');
     }
 
-    .projects > :nth-of-type(7) {
+    .projects > div:nth-of-type(3) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/mobile/image-edelweiss.jpg');
     }
 
-    .projects > :nth-of-type(8) {
+    .projects > div:nth-of-type(3) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/mobile/image-netcry.jpg');
     }
 
-    .projects > :nth-of-type(9) {
+    .projects > div:nth-of-type(3) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/mobile/image-hypers.jpg');
     }
 
-    .projects > :nth-of-type(10) {
+    .projects > div:nth-of-type(4) > :nth-of-type(1) {
         background-image: url('/assets/portfolio/mobile/image-sxiv.jpg');
     }
 
-    .projects > :nth-of-type(11) {
+    .projects > div:nth-of-type(4) > :nth-of-type(2) {
         background-image: url('/assets/portfolio/mobile/image-trinity.jpg');
     }
 
-    .projects > :nth-of-type(12) {
+    .projects > div:nth-of-type(4) > :nth-of-type(3) {
         background-image: url('/assets/portfolio/mobile/image-paramour.jpg');
     }
 
-    .projects > .project > .inner {
+    .projects > div > .project > .inner {
         bottom: 1.6rem;
         left: 1.6rem;
     }
