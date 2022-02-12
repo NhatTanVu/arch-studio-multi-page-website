@@ -1,8 +1,9 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../components/layout'
-import localStyles from '../styles/about.module.scss'
-import { useEffect } from "react";
+//import Link from 'next/link';
+import Head from 'next/head';
+import Layout from '../components/layout';
+import localStyles from '../styles/about.module.scss';
+import React, { useState, useEffect } from 'react';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 const pageTitle = "Arch Studio Website Challenge | About";
 
@@ -14,6 +15,28 @@ export default function About() {
             document.documentElement.classList.remove(localStyles.root);
         };
     }, []);
+
+    const [ourHeritageRef, isOurHeritageOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isOurHeritageShown, setOurHeritageShown] = useState(false);
+    useEffect(() => {
+        if (isOurHeritageOnScreen)
+            setOurHeritageShown(true);
+    }, [isOurHeritageOnScreen]);
+
+    const [theLeadersRef, isTheLeadersOnScreen] = useElementOnScreen({
+        root: null,
+        rootMargin: "0px 0px -50px 0px",
+        threshold: 0
+    });
+    const [isTheLeadersShown, setTheLeadersShown] = useState(false);
+    useEffect(() => {
+        if (isTheLeadersOnScreen)
+            setTheLeadersShown(true);
+    }, [isTheLeadersOnScreen]);
 
     return (
         <Layout bookmarkText="ABOUT US">
@@ -38,7 +61,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className={`${localStyles["our-heritage"]} flex`}>
+            <div ref={ourHeritageRef} className={`${localStyles["our-heritage"]} flex ${isOurHeritageShown ? "isShown" : "isHidden"}`}>
                 <div className={`${localStyles["left"]} vertical-flex`}>
                     <div className={localStyles["separator"]}></div>
                     <h2>Our<br />Heritage</h2>
@@ -52,7 +75,7 @@ export default function About() {
                 </div>
                 <div className={localStyles["right"]}></div>
             </div>
-            <div className={`${localStyles["the-leaders"]} flex`}>
+            <div ref={theLeadersRef} className={`${localStyles["the-leaders"]} flex ${isTheLeadersShown ? "isShown" : "isHidden"}`}>
                 <h2>The<br />Leaders</h2>
                 <div className={`${localStyles["inner"]} grid`}>
                     <div className={`${localStyles["leader"]} vertical-flex`}>
